@@ -2,38 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Busra Bocekli | Home</title>
+
   <style>
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background:
-        linear-gradient(rgba(30, 18, 10, 0.6), rgba(30, 18, 10, 0.6)),
-        url('busra.png') center center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding: 40px 56px;
+      height: 100%;
     }
 
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      background: #17191d;
+      color: white;
+      padding-top: 50px;
+    }
+
+    .name {
+      padding: 0 40px 30px;
+      line-height: 1.5;
+      font-size: 18px;
+    }
+
+    .menu a {
+      display: block;
+      padding: 18px 40px;
+      color: white;
+      text-decoration: none;
+      border-left: 4px solid transparent;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      background: #4a4a4a;
+      border-left: 4px solid white;
+    }
+
+    /* Main area */
+    .main {
+      flex: 1;
+      min-height: 100vh;
+
+      /* ✅ YOUR IMAGE HERE */
+      background:
+        linear-gradient(rgba(30,18,10,0.6), rgba(30,18,10,0.6)),
+        url('busra.png') center center / cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      padding: 40px 60px;
+    }
+
+    /* Big clickable boxes */
     .overlay-links {
-      width: min(760px, 100%);
-      margin-left: 20px;
-      border: 3px solid rgba(255,255,255,0.9);
-      background: rgba(0,0,0,0.12);
+      border: 3px solid white;
+      width: 70%;
     }
 
     .panel-link {
       display: block;
-      text-decoration: none;
+      font-size: 64px;
+      font-weight: bold;
       color: white;
-      font-size: clamp(2.7rem, 7vw, 5.4rem);
-      font-weight: 800;
-      padding: 34px 42px;
-      border-bottom: 3px solid rgba(255,255,255,0.9);
-      transition: background 0.2s ease, transform 0.2s ease;
-      letter-spacing: -1px;
+      text-decoration: none;
+      padding: 30px;
+      border-bottom: 3px solid white;
     }
 
     .panel-link:last-child {
@@ -41,20 +83,10 @@
     }
 
     .panel-link:hover {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.15);
     }
 
-    .note {
-      position: absolute;
-      bottom: 24px;
-      right: 26px;
-      color: rgba(255,255,255,0.9);
-      font-size: 0.95rem;
-      background: rgba(0,0,0,0.28);
-      padding: 10px 14px;
-      border-radius: 999px;
-    }
-
+    /* Mobile */
     @media (max-width: 900px) {
       .layout {
         flex-direction: column;
@@ -62,53 +94,57 @@
 
       .sidebar {
         width: 100%;
-        padding-top: 28px;
-      }
-
-      .name {
-        padding: 0 24px 20px;
-      }
-
-      .menu a {
-        padding: 14px 24px;
       }
 
       .main {
-        padding: 24px;
+        padding: 20px;
       }
 
       .overlay-links {
-        margin-left: 0;
+        width: 100%;
       }
 
       .panel-link {
-        padding: 26px 24px;
+        font-size: 40px;
       }
     }
+
   </style>
 </head>
+
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="name">Busra<br>Bocekli,<br>PhD Student</div>
-      <nav class="menu">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </aside>
 
-    <main class="main">
-      <div class="overlay-links">
-        <a class="panel-link" href="research.html">Earthquakes.</a>
-        <a class="panel-link" href="teaching.html">Teaching.</a>
-        <a class="panel-link" href="about.html">Engineering.</a>
-      </div>
+<div class="layout">
 
-      <div class="note">Click each box to open a separate page</div>
-    </main>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="name">
+      Busra<br>
+      Bocekli,<br>
+      PhD Student
+    </div>
+
+    <div class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <div class="overlay-links">
+      <a class="panel-link" href="research.html">Earthquakes.</a>
+      <a class="panel-link" href="teaching.html">Teaching.</a>
+      <a class="panel-link" href="about.html">Engineering.</a>
+    </div>
+
+  </div>
+
+</div>
+
 </body>
 </html>
