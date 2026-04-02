@@ -9,63 +9,8 @@
     html, body { margin: 0; padding: 0; }
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #111;
-      color: white;
-      min-height: 100vh;
-    }
-
-    .layout {
-      display: flex;
-      min-height: 100vh;
-    }
-
-    .sidebar {
-      width: 290px;
-      background: #17191d;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      padding-top: 48px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .name {
-      font-size: 1.05rem;
-      line-height: 1.45;
-      font-weight: 300;
-      color: #f1f1f1;
-      padding: 0 44px 34px;
-      letter-spacing: 0.3px;
-    }
-
-    .menu {
-      display: flex;
-      flex-direction: column;
-      margin-top: 8px;
-    }
-
-    .menu a {
-      color: #f1f1f1;
-      text-decoration: none;
-      padding: 18px 44px;
-      font-size: 1rem;
-      border-left: 4px solid transparent;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .menu a.active,
-    .menu a:hover {
-      background: #4a4a4a;
-      border-left-color: #ffffff;
-    }
-
-    .main {
-      flex: 1;
-      min-height: 100vh;
-      position: relative;
       background:
-        linear-gradient(rgba(30, 18, 10, 0.45), rgba(30, 18, 10, 0.45)),
+        linear-gradient(rgba(30, 18, 10, 0.6), rgba(30, 18, 10, 0.6)),
         url('busra.png') center center / cover no-repeat;
       display: flex;
       align-items: center;
