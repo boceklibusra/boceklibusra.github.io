@@ -5,345 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Busra Bocekli | Home</title>
   <style>
-    :root {
-      --bg: #f7f4ef;
-      --text: #1f1f1f;
-      --muted: #666;
-      --line: #d9d1c7;
-      --accent: #1d4ed8;
-      --card: #ffffff;
-      --max: 1180px;
-    }
-
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--text);
-      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: white;
+      min-height: 100vh;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .topbar {
-      border-bottom: 1px solid var(--line);
-      background: rgba(247, 244, 239, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-    }
-
-    .topbar-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 24px;
+    .layout {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+      min-height: 100vh;
     }
 
-    .brand {
-      font-size: 1.7rem;
-      font-weight: 700;
+    .sidebar {
+      width: 290px;
+      background: #17191d;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .name {
+      font-size: 1.05rem;
+      line-height: 1.45;
+      font-weight: 300;
+      color: #f1f1f1;
+      padding: 0 44px 34px;
       letter-spacing: 0.3px;
     }
 
-    .nav {
+    .menu {
       display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
+      flex-direction: column;
+      margin-top: 8px;
     }
 
-    .nav a:hover,
-    .social a:hover,
-    .cta:hover {
-      color: var(--accent);
+    .menu a {
+      color: #f1f1f1;
+      text-decoration: none;
+      padding: 18px 44px;
+      font-size: 1rem;
+      border-left: 4px solid transparent;
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
-    .hero {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 72px 24px 44px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
+    .menu a.active,
+    .menu a:hover {
+      background: #4a4a4a;
+      border-left-color: #ffffff;
+    }
+
+    .main {
+      flex: 1;
+      min-height: 100vh;
+      position: relative;
+      background:
+        linear-gradient(rgba(30, 18, 10, 0.45), rgba(30, 18, 10, 0.45)),
+        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80') center center / cover no-repeat;
+      display: flex;
       align-items: center;
+      padding: 40px 56px;
     }
 
-    .hero h1 {
-      font-size: clamp(2.6rem, 7vw, 5.4rem);
-      line-height: 0.95;
-      margin: 0 0 22px;
-      font-weight: 700;
+    .overlay-links {
+      width: min(760px, 100%);
+      margin-left: 20px;
+      border: 3px solid rgba(255,255,255,0.9);
+      background: rgba(0,0,0,0.12);
     }
 
-    .hero-copy {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.08rem;
-      line-height: 1.8;
-      max-width: 640px;
-      color: #333;
+    .panel-link {
+      display: block;
+      text-decoration: none;
+      color: white;
+      font-size: clamp(2.7rem, 7vw, 5.4rem);
+      font-weight: 800;
+      padding: 34px 42px;
+      border-bottom: 3px solid rgba(255,255,255,0.9);
+      transition: background 0.2s ease, transform 0.2s ease;
+      letter-spacing: -1px;
     }
 
-    .hero-box {
-      background: var(--card);
-      border: 1px solid var(--line);
-      padding: 28px;
-      border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-      font-family: Arial, Helvetica, sans-serif;
+    .panel-link:last-child {
+      border-bottom: none;
     }
 
-    .hero-box h3 {
-      margin-top: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.5rem;
+    .panel-link:hover {
+      background: rgba(255,255,255,0.12);
     }
 
-    .cta {
-      display: inline-block;
-      margin-top: 18px;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .section {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 12px 24px 38px;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1;
-      margin: 0 0 28px;
-      border-top: 1px solid var(--line);
-      padding-top: 32px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 26px;
-      min-height: 260px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 1.45rem;
-    }
-
-    .card p {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.75;
-      color: #333;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    .about-box,
-    .contact-box {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
-    }
-
-    .about-box p,
-    .contact-box p,
-    .contact-box li {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.8;
-      color: #333;
-    }
-
-    .contact-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .contact-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eee4d8;
-    }
-
-    .social {
-      display: flex;
-      gap: 18px;
-      margin-top: 18px;
-      font-family: Arial, Helvetica, sans-serif;
+    .note {
+      position: absolute;
+      bottom: 24px;
+      right: 26px;
+      color: rgba(255,255,255,0.9);
       font-size: 0.95rem;
+      background: rgba(0,0,0,0.28);
+      padding: 10px 14px;
+      border-radius: 999px;
     }
 
-    footer {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 10px 24px 48px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 960px) {
-      .hero,
-      .cards,
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 48px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .topbar-inner {
-        align-items: flex-start;
+    @media (max-width: 900px) {
+      .layout {
         flex-direction: column;
       }
 
-      .nav {
-        gap: 14px;
+      .sidebar {
+        width: 100%;
+        padding-top: 28px;
       }
 
-      .hero,
-      .section,
-      footer {
-        padding-left: 18px;
-        padding-right: 18px;
+      .name {
+        padding: 0 24px 20px;
+      }
+
+      .menu a {
+        padding: 14px 24px;
+      }
+
+      .main {
+        padding: 24px;
+      }
+
+      .overlay-links {
+        margin-left: 0;
+      }
+
+      .panel-link {
+        padding: 26px 24px;
       }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="#home" class="brand">Busra Bocekli, PhD Student</a>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact</a>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="name">Busra<br>Bocekli,<br>PhD Student</div>
+      <nav class="menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="contact.html">Contact</a>
       </nav>
-    </div>
-  </header>
+    </aside>
 
-  <main>
-    <section class="hero" id="home">
-      <div>
-        <h1>Earthquakes.<br>Research.<br>Teaching.</h1>
-        <div class="hero-copy">
-          I am a Ph.D. student in geotechnical earthquake engineering at Old Dominion University. My work focuses on ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking for improved seismic hazard understanding.
-        </div>
+    <main class="main">
+      <div class="overlay-links">
+        <a class="panel-link" href="research.html">Earthquakes.</a>
+        <a class="panel-link" href="teaching.html">Teaching.</a>
+        <a class="panel-link" href="about.html">Engineering.</a>
       </div>
 
-      <aside class="hero-box">
-        <h3>Current Focus</h3>
-        <p>I study how community-reported earthquake intensity data can complement sparse instrumental records and strengthen ground-motion modeling in California and beyond.</p>
-        <a class="cta" href="#research">Explore My Research →</a>
-      </aside>
-    </section>
-
-    <section class="section" id="research">
-      <h2 class="section-title">Research.</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Ground-Motion Modeling</h3>
-          <p>I investigate attenuation behavior, variability, and predictive relationships between observed shaking and engineering intensity measures such as PGA.</p>
-        </article>
-        <article class="card">
-          <h3>DYFI & Instrumental Data</h3>
-          <p>I compare community-reported shaking intensity with instrumental recordings to evaluate consistency and improve models where station coverage is limited.</p>
-        </article>
-        <article class="card">
-          <h3>Spatial Correlation</h3>
-          <p>I study nonstationary spatial correlation decay rates in California to better understand regional differences in earthquake ground motion.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="teaching">
-      <h2 class="section-title">Teaching.</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Laboratory Instruction</h3>
-          <p>I support soil mechanics and foundation engineering learning through lab instruction, grading, and clear experiment guidance for undergraduate students.</p>
-        </article>
-        <article class="card">
-          <h3>Student Support</h3>
-          <p>I value approachable teaching, structured feedback, and helping students connect theory with real engineering applications.</p>
-        </article>
-        <article class="card">
-          <h3>Technical Communication</h3>
-          <p>I create explanations, reports, and presentation materials that make complex engineering topics easier to understand.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <h2 class="section-title">About Me.</h2>
-      <div class="split">
-        <div class="about-box">
-          <p>Hello, I’m Busra Bocekli. I am a civil engineer and architect currently pursuing my Ph.D. in Civil Engineering. My academic interests include geotechnical earthquake engineering, probabilistic modeling, and seismic hazard research.</p>
-          <p>Beyond research, I enjoy teaching, technical writing, and building interdisciplinary connections between engineering, data analysis, and communication.</p>
-        </div>
-        <div class="about-box">
-          <p><strong>You can customize this box later with:</strong></p>
-          <p>• your CV link<br>
-             • selected publications<br>
-             • conference presentations<br>
-             • awards and grants<br>
-             • internship or industry experience</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <h2 class="section-title">Contact.</h2>
-      <div class="contact-box">
-        <p>Feel free to update the details below with your real contact information.</p>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> yourname@odu.edu</li>
-          <li><strong>GitHub:</strong> github.com/boceklibusra</li>
-          <li><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</li>
-          <li><strong>Location:</strong> Norfolk, Virginia</li>
-        </ul>
-        <div class="social">
-          <a href="#">LinkedIn</a>
-          <a href="#">GitHub</a>
-          <a href="#">CV</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2026 Busra Bocekli. All rights reserved.
-  </footer>
+      <div class="note">Click each box to open a separate page</div>
+    </main>
+  </div>
 </body>
 </html>
