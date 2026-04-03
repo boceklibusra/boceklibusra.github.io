@@ -16,7 +16,7 @@
       color: #1f1f1f;
     }
 
-    /* Sidebar (same as homepage) */
+    /* Sidebar */
     .sidebar {
       width: 260px;
       background: #1c1c1c;
@@ -50,29 +50,51 @@
       flex: 1;
       padding: 40px 60px;
       background: #e9e7e4;
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+    }
+
+    .left-column {
+      flex-shrink: 0;
+    }
+
+    .profile-photo {
+      width: 310px;
+      height: 310px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .right-column {
+      flex: 1;
     }
 
     h1 {
       margin-top: 0;
+      margin-bottom: 24px;
       font-size: 2.8rem;
-      font-weight: 600; /* not bold */
+      font-weight: 600;
     }
 
     p {
       line-height: 1.7;
       font-size: 1.05rem;
       margin-bottom: 16px;
+      font-weight: 400;
     }
 
     ul {
       padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 20px;
     }
 
     li {
       margin-bottom: 14px;
       line-height: 1.7;
       font-size: 1.05rem;
-      font-weight: 400; /* not bold */
+      font-weight: 400;
     }
 
     .btn {
@@ -84,8 +106,46 @@
       text-decoration: none;
       border-radius: 3px;
       font-size: 14px;
+      font-weight: 500;
     }
 
+    @media (max-width: 1000px) {
+      .main {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .profile-photo {
+        width: 260px;
+        height: 260px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        padding-top: 30px;
+      }
+
+      .main {
+        padding: 30px 20px;
+      }
+
+      .profile-photo {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -107,30 +167,34 @@
 
   <!-- Main content -->
   <div class="main">
-  <img src="busra-about.jpg" class="profile-photo">
-    <h1>About Me</h1>
+    <div class="left-column">
+      <img src="busra-about.jpg" alt="Busra Bocekli portrait" class="profile-photo" />
+    </div>
 
-    <p>
-      I am a Ph.D. student in geotechnical earthquake engineering with a background in civil engineering and architecture. My research focuses on ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking.
-    </p>
+    <div class="right-column">
+      <h1>About Me</h1>
 
-    <p>
-      I have experience in teaching and laboratory instruction in soil mechanics and foundation engineering, where I support students in understanding experimental concepts and data interpretation.
-    </p>
+      <p>
+        I am a Ph.D. student in geotechnical earthquake engineering with a background in civil engineering and architecture. My research focuses on ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking.
+      </p>
 
-    <p>
-      My work combines research, teaching, and engineering practice, with an emphasis on clear technical communication and interdisciplinary collaboration.
-    </p>
+      <p>
+        I have experience in teaching and laboratory instruction in soil mechanics and foundation engineering, where I support students in understanding experimental concepts and data interpretation.
+      </p>
 
-    <ul>
-      <li>Ground-motion modeling and seismic hazard analysis</li>
-      <li>DYFI intensity data integration</li>
-      <li>Teaching and laboratory instruction</li>
-      <li>Interdisciplinary engineering research</li>
-    </ul>
+      <p>
+        My work combines research, teaching, and engineering practice, with an emphasis on clear technical communication and interdisciplinary collaboration.
+      </p>
 
-    <a href="Busra_Bocekli_CV.pdf" target="_blank" class="btn">Download CV</a>
+      <ul>
+        <li>Ground-motion modeling and seismic hazard analysis</li>
+        <li>DYFI intensity data integration</li>
+        <li>Teaching and laboratory instruction</li>
+        <li>Interdisciplinary engineering research</li>
+      </ul>
 
+      <a href="Busra_Bocekli_CV.pdf" target="_blank" class="btn">Download CV</a>
+    </div>
   </div>
 
 </body>
