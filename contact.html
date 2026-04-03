@@ -1,325 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Busra Bocekli | Contact</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Busra Bocekli | Contact</title>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      min-height: 100vh;
-      color: #222;
-      background: #e9e7e4;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-    .sidebar {
-      width: 260px;
-      background: #1c1c1c;
-      color: white;
-      padding-top: 50px;
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 
-    .name {
-      padding: 0 30px 30px;
-      font-size: 18px;
-      line-height: 1.5;
-      font-weight: 400;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  color: #222;
+  background: #e9e7e4;
+}
 
-    .menu a {
-      display: block;
-      padding: 16px 30px;
-      color: white;
-      text-decoration: none;
-      border-left: 4px solid transparent;
-      font-weight: 400;
-    }
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #1c1c1c;
+  color: white;
+  padding-top: 50px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    .menu a:hover,
-    .menu a.active {
-      background: #555;
-      border-left: 4px solid white;
-    }
+.name {
+  padding: 0 30px 20px;
+  font-size: 16px; /* smaller */
+  line-height: 1.4;
+}
 
-    .sidebar-footer {
-      padding: 20px 30px;
-    }
+.menu a {
+  display: block;
+  padding: 14px 30px;
+  color: white;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  font-weight: 400;
+  font-size: 14px;
+}
 
-    .line {
-      width: 160px;
-      height: 1px;
-      background: rgba(255,255,255,0.7);
-      margin-bottom: 8px;
-    }
+.menu a:hover,
+.menu a.active {
+  background: #555;
+  border-left: 4px solid white;
+}
 
-    .sidebar-footer p {
-      margin: 0;
-      font-size: 12px;
-      color: rgba(255,255,255,0.8);
-      font-weight: 400;
-      line-height: 1.5;
-    }
+/* Footer */
+.sidebar-footer {
+  padding: 18px 30px;
+}
 
-    .main {
-      flex: 1;
-      padding: 42px 56px;
-    }
+.line {
+  width: 140px;
+  height: 1px;
+  background: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
+}
 
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 48px;
-      align-items: start;
-    }
+.sidebar-footer p {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 400;
+}
 
-    .left-panel h1 {
-      font-size: 2.6rem;
-      font-weight: 500;
-      margin: 0 0 28px;
-      color: #111;
-      text-align: center;
-    }
+/* Main */
+.main {
+  flex: 1;
+  padding: 28px 40px; /* smaller */
+}
 
-    .left-panel h2 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin: 0 0 18px;
-      color: #111;
-      text-align: center;
-    }
+.contact-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+}
 
-    .icon-row {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+/* LEFT SIDE */
+.left-panel h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+}
 
-    .icon-img {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.2s ease;
-    }
+.left-panel h2 {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
 
-    .icon-img:hover {
-      transform: scale(1.08);
-    }
+/* Icons */
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
 
-    .left-panel p {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      margin: 0;
-      max-width: 320px;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.icon-img {
+  width: 40px; /* smaller */
+  height: 40px;
+  border-radius: 50%;
+}
 
-    .form-wrap {
-      width: 100%;
-    }
+/* Text */
+.left-panel p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 280px;
+  margin: auto;
+}
 
-    .form-card {
-      background: #f7f7f7;
-      border-radius: 10px;
-      box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
-      margin-bottom: 18px;
-      overflow: hidden;
-    }
+/* FORM */
+.form-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-    .form-header {
-      border-top: 12px solid #9c9c9c;
-      padding: 22px 28px 18px;
-      background: #f7f7f7;
-    }
+/* 🔥 KEY FIX: smaller Google Form */
+iframe {
+  width: 100%;
+  height: 600px; /* ↓ reduced from 800 */
+  border: none;
+}
 
-    .form-header h3 {
-      margin: 0;
-      font-size: 2rem;
-      font-weight: 400;
-    }
+.note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #666;
+}
 
-    .form-subtext {
-      padding: 0 28px 22px;
-      font-size: 0.95rem;
-      color: #c62828;
-    }
+/* Responsive */
+@media (max-width: 900px) {
+  body { flex-direction: column; }
 
-    .field-card {
-      background: #f7f7f7;
-      border-radius: 10px;
-      box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
-      padding: 26px 28px 36px;
-      margin-bottom: 18px;
-    }
+  .sidebar {
+    width: 100%;
+  }
 
-    .field-card label {
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 28px;
-      font-weight: 400;
-      color: #222;
-    }
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
 
-    .required::after {
-      content: ' *';
-      color: #d93025;
-    }
-
-    .input-line,
-    .textarea-line {
-      width: 52%;
-      border: none;
-      border-bottom: 1px solid #c9c9c9;
-      background: transparent;
-      padding: 8px 0;
-      font-size: 0.98rem;
-      font-family: inherit;
-      outline: none;
-    }
-
-    .textarea-line {
-      width: 96%;
-      resize: vertical;
-      min-height: 42px;
-    }
-
-    .form-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .submit-btn {
-      background: #7f7f7f;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      padding: 12px 28px;
-      font-size: 1rem;
-      font-family: inherit;
-      cursor: pointer;
-    }
-
-    .clear-link {
-      color: #666;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .note {
-      margin-top: 18px;
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 1100px) {
-      .contact-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .left-panel p {
-        max-width: 560px;
-        text-align: left;
-      }
-    }
-
-    @media (max-width: 900px) {
-      body {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-      }
-
-      .main {
-        padding: 28px 20px;
-      }
-
-      .input-line,
-      .textarea-line {
-        width: 100%;
-      }
-    }
-  </style>
+  iframe {
+    height: 700px;
+  }
+}
+</style>
 </head>
-<body>
-  <div class="sidebar">
-    <div>
-      <div class="name">
-        Busra<br>
-        Bocekli,<br>
-        PhD Student
-      </div>
 
-      <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="contact.html" class="active">Contact</a>
-      </div>
+<body>
+
+<div class="sidebar">
+  <div>
+    <div class="name">
+      Busra<br>
+      Bocekli,<br>
+      PhD Student
     </div>
 
-    <div class="sidebar-footer">
-      <div class="line"></div>
-      <p>© 2026 Busra Bocekli. All rights reserved.</p>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="contact.html" class="active">Contact</a>
     </div>
   </div>
 
-  <main class="main">
-    <div class="contact-layout">
-      <section class="left-panel">
-        <h1>Contact Me</h1>
-        <h2>Find me Online:</h2>
+  <div class="sidebar-footer">
+    <div class="line"></div>
+    <p>© 2026 Busra Bocekli. All rights reserved.</p>
+  </div>
+</div>
 
-        <div class="icon-row">
-          <a href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">
-            <img src="linkedin.png" class="icon-img" alt="LinkedIn">
-          </a>
-          <a href="https://orcid.org/0009-0000-7788-9897" target="_blank">
-            <img src="ORCID_iD.png" class="icon-img" alt="ORCID">
-          </a>
-          <a href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">
-            <img src="Google_scholar.png" class="icon-img" alt="Google Scholar">
-          </a>
-          <a href="https://github.com/boceklibusra" target="_blank">
-            <img src="GitHub-Logo.jpg" class="icon-img" alt="GitHub">
-          </a>
-        </div>
+<div class="main">
+  <div class="contact-layout">
 
-        <p>
-          If you are curious about what I do, or you want to share your passions with me, I would be happy for you to reach out. Feel free to use the contact form to connect with me.
-        </p>
-      </section>
+    <!-- LEFT -->
+    <div class="left-panel">
+      <h1>Contact Me</h1>
+      <h2>Find me Online:</h2>
 
-      <section class="form-wrap"> 
-        <div class="form-card">
-          <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLScltuVR2V7MlQHemxNbNRmigijVB5r_Ke8VpWSVllW4M4Cd4w/viewform?usp=publish-editor"
-            width="100%" 
-            height="800" 
-            frameborder="0">
-          </iframe>
-        </div>
-          
+      <div class="icon-row">
+        <a href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">
+          <img src="linkedin.png" class="icon-img">
+        </a>
+        <a href="https://orcid.org/0009-0000-7788-9897" target="_blank">
+          <img src="ORCID_iD.png" class="icon-img">
+        </a>
+        <a href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">
+          <img src="Google_scholar.png" class="icon-img">
+        </a>
+        <a href="https://github.com/boceklibusra" target="_blank">
+          <img src="GitHub-Logo.jpg" class="icon-img">
+        </a>
+      </div>
 
-        <div class="note">Never submit passwords through this form.</div>
-      </section>
+      <p>
+        Feel free to reach out if you'd like to connect, collaborate, or learn more about my work.
+      </p>
     </div>
-  </main>
+
+    <!-- RIGHT -->
+    <div class="form-card">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScltuVR2V7MlQHemxNbNRmigijVB5r_Ke8VpWSVllW4M4Cd4w/viewform?embedded=true"></iframe>
+      <div class="note">Never submit passwords through this form.</div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
