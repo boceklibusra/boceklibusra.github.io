@@ -25,12 +25,17 @@ body {
   color: white;
   padding-top: 50px;
   flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 👈 pushes footer down */
 }
 
 .name {
   padding: 0 30px 30px;
   font-size: 18px;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 .menu a {
@@ -39,12 +44,32 @@ body {
   color: white;
   text-decoration: none;
   border-left: 4px solid transparent;
+  font-weight: 400; /* NOT bold */
 }
 
 .menu a:hover,
 .menu a.active {
   background: #555;
   border-left: 4px solid white;
+}
+
+/* Sidebar footer (bottom) */
+.sidebar-footer {
+  padding: 20px 30px;
+}
+
+.line {
+  width: 160px;
+  height: 1px;
+  background: rgba(255,255,255,0.7);
+  margin-bottom: 8px;
+}
+
+.sidebar-footer p {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 400;
 }
 
 /* Main layout */
@@ -58,73 +83,36 @@ body {
   align-items: flex-start;
 }
 
-/* LEFT SIDE (photo + icons) */
+/* LEFT SIDE */
 .left-column {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Profile photo */
 .profile-photo {
   width: 260px;
   height: 260px;
   object-fit: cover;
 }
 
-/* ICONS under photo */
+/* Icons */
 .footer-icons {
   display: flex;
-  flex-direction: row;
   gap: 10px;
   margin-top: 15px;
 }
 
-/* ICON SIZE (fixed) */
 .icon-img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
 }
 
-/* Optional hover */
 .icon-img:hover {
   transform: scale(1.1);
   transition: 0.2s;
-}
-
-/* RIGHT TEXT */
-.content {
-  max-width: 800px;
-}
-
-/* Title */
-h1 {
-  font-size: 48px;
-  font-weight: 500; /* NOT bold */
-  margin-bottom: 25px;
-}
-
-/* Paragraph */
-p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 16px;
-  font-weight: 400;
-}
-
-/* List */
-ul {
-  padding-left: 20px;
-}
-
-li {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 14px;
-  font-weight: 400;
 }
 
 /* Buttons */
@@ -139,6 +127,32 @@ li {
   text-decoration: none;
   border-radius: 3px;
   font-size: 14px;
+}
+
+/* RIGHT TEXT */
+.content {
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  font-size: 16px;
+  margin-bottom: 14px;
 }
 
 /* Responsive */
@@ -162,19 +176,29 @@ li {
 
 <body>
 
-<!-- Sidebar -->
 <div class="sidebar">
-  <div class="name">
-    Busra<br>
-    Bocekli,<br>
-    PhD Student
+
+  <!-- TOP -->
+  <div>
+    <div class="name">
+      Busra<br>
+      Bocekli,<br>
+      PhD Student
+    </div>
+
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Me</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 
-  <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About Me</a>
-    <a href="contact.html">Contact</a>
+  <!-- BOTTOM -->
+  <div class="sidebar-footer">
+    <div class="line"></div>
+    <p>© 2026 Busra Bocekli. All rights reserved.</p>
   </div>
+
 </div>
 
 <!-- Main -->
@@ -201,13 +225,10 @@ li {
 
     <a href="contact.html" class="btn">Contact</a>
     <a href="Busra_Bocekli_CV.pdf" target="_blank" class="btn">Curriculum Vitae (CV)</a>
-
-    
   </div>
 
   <!-- RIGHT -->
   <div class="content">
-
     <h1>About Me</h1>
 
     <p>
@@ -215,22 +236,19 @@ li {
     </p>
 
     <p>
-      I have experience in teaching and laboratory instruction in soil mechanics and foundation engineering, where I support students in understanding experimental concepts and data interpretation.
+      I have experience in teaching and laboratory instruction in soil mechanics and foundation engineering.
     </p>
 
     <p>
-      My work combines research, teaching, and engineering practice, with an emphasis on clear technical communication and interdisciplinary collaboration.
+      My work combines research, teaching, and engineering practice.
     </p>
 
     <ul>
-      <li>Ground-motion modeling and seismic hazard analysis</li>
-      <li>DYFI intensity data integration</li>
-      <li>Teaching and laboratory instruction</li>
-      <li>Interdisciplinary engineering research</li>
+      <li>Ground-motion modeling</li>
+      <li>DYFI data integration</li>
+      <li>Teaching and labs</li>
+      <li>Interdisciplinary research</li>
     </ul>
-
-    
-
   </div>
 
 </div>
