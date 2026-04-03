@@ -1,181 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Busra Bocekli</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busra Bocekli</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
 
-<style>
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
-.layout {
-  display: flex;
-  min-height: 100vh;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
 
-/* Sidebar */
-.sidebar {
-  width: 260px;
-  background: #1c1c1c;
-  color: white;
-  padding-top: 50px;
-}
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
 
-.name {
-  padding: 0 30px 30px;
-  font-size: 18px;
-  line-height: 1.5;
-}
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: #1c1c1c;
+      color: white;
+      padding-top: 50px;
+      flex-shrink: 0;
+    }
 
-.menu a {
-  display: block;
-  padding: 16px 30px;
-  color: white;
-  text-decoration: none;
-  border-left: 4px solid transparent;
-}
+    .name {
+      padding: 0 30px 30px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
 
-.menu a:hover,
-.menu a.active {
-  background: #555;
-  border-left: 4px solid white;
-}
+    .menu a {
+      display: block;
+      padding: 16px 30px;
+      color: white;
+      text-decoration: none;
+      border-left: 4px solid transparent;
+    }
 
-/* Main */
-.main {
-  flex: 1;
-  position: relative;
-  background: url('busra.png') center center / cover no-repeat; /* original photo */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 40px 60px 120px 60px;
-}
+    .menu a:hover,
+    .menu a.active {
+      background: #555;
+      border-left: 4px solid white;
+    }
 
-/* Text section */
-.overlay {
-  margin-left: 30px;
-  width: 80%;
-  margin-top: 75px;
+    /* Main */
+    .main {
+      flex: 1;
+      position: relative;
+      background: url('busra.png') center center / cover no-repeat;
+      padding: 40px 60px 120px 60px;
+      overflow: hidden;
+    }
 
-  display: flex;
-  gap: 60px; /* space between items */
-}
+    /* Text box area */
+    .overlay {
+      width: 64%;
+      margin-top: 95px;
+      margin-left: 10px;
+      border: 3px solid white;
+    }
 
-.block {
-  font-size: 60px;
-  font-weight: 800;
-  color: white;
-  text-decoration: none;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    .block {
+      display: block;
+      font-size: 68px;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      padding: 34px 40px;
+      border-bottom: 3px solid white;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+      transition: transform 0.2s ease, text-shadow 0.2s ease, background 0.2s ease;
+      line-height: 1.05;
+    }
 
-  transition: transform 0.2s ease;
-}
+    .block:last-child {
+      border-bottom: none;
+    }
 
-.block:hover {
-  transform: translateY(-5px);
-  text-shadow: 0 0 18px rgba(255,255,255,0.45);
-}
-/* Move ONLY first item slightly down (~1 cm) */
-.block:first-child {
-  margin-top: 38px;
-}
+    .block:hover {
+      transform: translateX(8px);
+      text-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.06);
+    }
 
-.block:nth-child(2) { animation-delay: 0.15s; }
-.block:nth-child(3) { animation-delay: 0.3s; }
+    /* Footer icons */
+    .footer {
+      position: absolute;
+      left: 50%;
+      bottom: 25px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+    }
 
-.block:hover {
-  transform: translateX(8px);
-  text-shadow: 0 0 18px rgba(255,255,255,0.45);
-}
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
 
-/* Footer icons centered bottom */
-.footer {
-  position: absolute;
-  left: 50%;
-  bottom: 25px;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 18px;
-}
+    .linkedin { background: #0077B5; }
+    .orcid { background: #A6CE39; }
+    .scholar { background: #4285F4; }
+    .github { background: #000000; }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  font-weight: bold;
-}
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .overlay {
+        width: 78%;
+      }
 
-.linkedin { background: #0077B5; }
-.orcid { background: #A6CE39; }
-.scholar { background: #4285F4; }
-.github { background: #000; }
+      .block {
+        font-size: 54px;
+      }
+    }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(22px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
 
-</style>
+      .sidebar {
+        width: 100%;
+        padding-top: 28px;
+      }
+
+      .main {
+        padding: 30px 20px 110px 20px;
+      }
+
+      .overlay {
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+      }
+
+      .block {
+        font-size: 40px;
+        padding: 24px 22px;
+      }
+
+      .footer {
+        bottom: 18px;
+        gap: 12px;
+      }
+
+      .icon {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="layout">
 
-<div class="layout">
+    <div class="sidebar">
+      <div class="name">
+        Busra<br>
+        Bocekli,<br>
+        PhD Student
+      </div>
 
-<div class="sidebar">
-  <div class="name">
-    Busra<br>
-    Bocekli,<br>
-    PhD Student
+      <div class="menu">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="overlay">
+        <a class="block" href="research.html">Research.</a>
+        <a class="block" href="teaching.html">Teaching.</a>
+        <a class="block" href="experience.html">Experience.</a>
+      </div>
+
+      <div class="footer">
+        <a class="icon linkedin" href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">in</a>
+        <a class="icon orcid" href="https://orcid.org/0009-0000-7788-9897" target="_blank">iD</a>
+        <a class="icon scholar" href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">GS</a>
+        <a class="icon github" href="https://github.com/boceklibusra" target="_blank">GH</a>
+      </div>
+    </div>
+
   </div>
-
-  <div class="menu">
-    <a class="active" href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
-
-<div class="main">
-
-  <div class="overlay">
-    <a class="block" href="research.html">Research.</a>
-    <a class="block" href="teaching.html">Teaching.</a>
-    <a class="block" href="experience.html">Experience.</a>
-  </div>
-
-  <!-- Footer icons -->
-  <div class="footer">
-    <a class="icon linkedin" href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">in</a>
-    <a class="icon orcid" href="https://orcid.org/0009-0000-7788-9897" target="_blank">iD</a>
-    <a class="icon scholar" href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">GS</a>
-    <a class="icon github" href="https://github.com/boceklibusra" target="_blank">GH</a>
-  </div>
-
-</div>
-
-</div>
-
 </body>
 </html>
