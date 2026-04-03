@@ -1,201 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Busra Bocekli | About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Busra Bocekli | About Me</title>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      min-height: 100vh;
-      color: #1f1f1f;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-    /* Sidebar */
-    .sidebar {
-      width: 260px;
-      background: #1c1c1c;
-      color: white;
-      padding-top: 50px;
-      flex-shrink: 0;
-    }
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 
-    .name {
-      padding: 0 30px 30px;
-      font-size: 18px;
-      line-height: 1.5;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  color: #2a2a2a;
+}
 
-    .menu a {
-      display: block;
-      padding: 16px 30px;
-      color: white;
-      text-decoration: none;
-      border-left: 4px solid transparent;
-    }
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #1c1c1c;
+  color: white;
+  padding-top: 50px;
+  flex-shrink: 0;
+}
 
-    .menu a:hover,
-    .menu a.active {
-      background: #555;
-      border-left: 4px solid white;
-    }
+.name {
+  padding: 0 30px 30px;
+  font-size: 18px;
+  line-height: 1.5;
+}
 
-    /* Main content */
-    .main {
-      flex: 1;
-      padding: 40px 60px;
-      background: #e9e7e4;
-      display: flex;
-      gap: 50px;
-      align-items: flex-start;
-    }
+.menu a {
+  display: block;
+  padding: 16px 30px;
+  color: white;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+}
 
-    .left-column {
-      flex-shrink: 0;
-    }
+.menu a:hover,
+.menu a.active {
+  background: #555;
+  border-left: 4px solid white;
+}
 
-    .profile-photo {
-      width: 310px;
-      height: 310px;
-      object-fit: cover;
-      display: block;
-    }
+/* Sidebar icons */
+.sidebar-icons {
+  display: flex;
+  gap: 10px;
+  padding: 20px 30px;
+}
 
-    .right-column {
-      flex: 1;
-    }
+.icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
 
-    h1 {
-      margin-top: 0;
-      margin-bottom: 24px;
-      font-size: 2.8rem;
-      font-weight: 600;
-    }
+.linkedin { background: #0077B5; }
+.orcid { background: #A6CE39; }
+.scholar { background: #4285F4; }
+.github { background: #000; }
 
-    p {
-      line-height: 1.7;
-      font-size: 1.05rem;
-      margin-bottom: 16px;
-      font-weight: 400;
-    }
+/* Main */
+.main {
+  flex: 1;
+  background: #e9e7e4;
+  padding: 50px 70px;
 
-    ul {
-      padding-left: 20px;
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
 
-    li {
-      margin-bottom: 14px;
-      line-height: 1.7;
-      font-size: 1.05rem;
-      font-weight: 400;
-    }
+/* Left image */
+.profile-photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 18px;
-      background: #2f3138;
-      color: white;
-      text-decoration: none;
-      border-radius: 3px;
-      font-size: 14px;
-      font-weight: 500;
-    }
+/* Right content */
+.content {
+  max-width: 800px;
+}
 
-    @media (max-width: 1000px) {
-      .main {
-        flex-direction: column;
-        gap: 30px;
-      }
+h1 {
+  font-size: 48px;
+  font-weight: 500; /* NOT bold */
+  margin-bottom: 25px;
+}
 
-      .profile-photo {
-        width: 260px;
-        height: 260px;
-      }
-    }
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
 
-    @media (max-width: 700px) {
-      body {
-        flex-direction: column;
-      }
+ul {
+  padding-left: 20px;
+}
 
-      .sidebar {
-        width: 100%;
-        padding-top: 30px;
-      }
+li {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
 
-      .main {
-        padding: 30px 20px;
-      }
+/* Buttons */
+.btn {
+  display: block;
+  width: 220px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px;
+  background: #2f3138;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 14px;
+}
 
-      .profile-photo {
-        width: 100%;
-        max-width: 320px;
-        height: auto;
-        aspect-ratio: 1 / 1;
-      }
+/* Responsive */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+    padding: 30px;
+  }
 
-      h1 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
+  .profile-photo {
+    width: 260px;
+    height: 260px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="name">
-      Busra<br>
-      Bocekli,<br>
-      PhD Student
-    </div>
+<!-- Sidebar -->
+<div class="sidebar">
 
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About Me</a>
-      <a href="contact.html">Contact</a>
-    </div>
+  <div class="name">
+    Busra<br>
+    Bocekli,<br>
+    PhD Student
   </div>
 
-  <!-- Main content -->
-  <div class="main">
-    <div class="left-column">
-      <img src="busra-about.jpg" alt="Busra Bocekli portrait" class="profile-photo" />
-    </div>
-
-    <div class="right-column">
-      <h1>About Me</h1>
-
-      <p>
-        I am a Ph.D. student in geotechnical earthquake engineering with a background in civil engineering and architecture. My research focuses on ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking.
-      </p>
-
-      <p>
-        I have experience in teaching and laboratory instruction in soil mechanics and foundation engineering, where I support students in understanding experimental concepts and data interpretation.
-      </p>
-
-      <p>
-        My work combines research, teaching, and engineering practice, with an emphasis on clear technical communication and interdisciplinary collaboration.
-      </p>
-
-      <ul>
-        <li>Ground-motion modeling and seismic hazard analysis</li>
-        <li>DYFI intensity data integration</li>
-        <li>Teaching and laboratory instruction</li>
-        <li>Interdisciplinary engineering research</li>
-      </ul>
-
-      <a href="Busra_Bocekli_CV.pdf" target="_blank" class="btn">Download CV</a>
-    </div>
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About Me</a>
+    <a href="contact.html">Contact</a>
   </div>
+
+  <!-- Icons (moved here like homepage) -->
+  <div class="sidebar-icons">
+    <a class="icon linkedin" href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">in</a>
+    <a class="icon orcid" href="https://orcid.org/0009-0000-7788-9897" target="_blank">iD</a>
+    <a class="icon scholar" href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">GS</a>
+    <a class="icon github" href="https://github.com/boceklibusra" target="_blank">GH</a>
+  </div>
+
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <!-- Left image -->
+  <img src="busra-about.jpg" class="profile-photo">
+
+  <!-- Right text -->
+  <div class="content">
+
+    <h1>About Me</h1>
+
+    <p>
+      I am a Ph.D. student in geotechnical earthquake engineering with a background in civil engineering and architecture. My research focuses on ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking.
+    </p>
+
+    <p>
+      I have experience in teaching and laboratory instruction in soil mechanics and foundation engineering, where I support students in understanding experimental concepts and data interpretation.
+    </p>
+
+    <p>
+      My work combines research, teaching, and engineering practice, with an emphasis on clear technical communication and interdisciplinary collaboration.
+    </p>
+
+    <ul>
+      <li>Ground-motion modeling and seismic hazard analysis</li>
+      <li>DYFI intensity data integration</li>
+      <li>Teaching and laboratory instruction</li>
+      <li>Interdisciplinary engineering research</li>
+    </ul>
+
+    <a href="contact.html" class="btn">Contact</a>
+    <a href="Busra_Bocekli_CV.pdf" target="_blank" class="btn">Curriculum Vitae (CV)</a>
+
+  </div>
+
+</div>
 
 </body>
 </html>
