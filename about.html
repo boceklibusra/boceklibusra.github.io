@@ -47,32 +47,7 @@ body {
   border-left: 4px solid white;
 }
 
-/* Sidebar icons */
-.sidebar-icons {
-  display: flex;
-  gap: 10px;
-  padding: 20px 30px;
-}
-
-.icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.linkedin { background: #0077B5; }
-.orcid { background: #A6CE39; }
-.scholar { background: #4285F4; }
-.github { background: #000; }
-
-/* Main */
+/* Main layout */
 .main {
   flex: 1;
   background: #e9e7e4;
@@ -83,24 +58,56 @@ body {
   align-items: flex-start;
 }
 
-/* Left image */
+/* LEFT SIDE (photo + icons) */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile photo */
 .profile-photo {
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
 }
 
-/* Right content */
+/* ICONS under photo */
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* ICON SIZE (fixed) */
+.icon-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Optional hover */
+.icon-img:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+/* RIGHT TEXT */
 .content {
   max-width: 800px;
 }
 
+/* Title */
 h1 {
   font-size: 48px;
   font-weight: 500; /* NOT bold */
   margin-bottom: 25px;
 }
 
+/* Paragraph */
 p {
   font-size: 16px;
   line-height: 1.7;
@@ -108,6 +115,7 @@ p {
   font-weight: 400;
 }
 
+/* List */
 ul {
   padding-left: 20px;
 }
@@ -141,15 +149,14 @@ li {
   }
 
   .profile-photo {
-    width: 260px;
-    height: 260px;
+    width: 220px;
+    height: 220px;
   }
 
   h1 {
     font-size: 36px;
   }
 }
-
 </style>
 </head>
 
@@ -157,7 +164,6 @@ li {
 
 <!-- Sidebar -->
 <div class="sidebar">
-
   <div class="name">
     Busra<br>
     Bocekli,<br>
@@ -169,40 +175,32 @@ li {
     <a href="about.html" class="active">About Me</a>
     <a href="contact.html">Contact</a>
   </div>
-
-  
-
 </div>
 
 <!-- Main -->
 <div class="main">
 
+  <!-- LEFT -->
   <div class="left-column">
-
-  <img src="busra-about.jpg" class="profile-photo">
-
-
+    <img src="busra-about.jpg" class="profile-photo">
 
     <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">
-              <img src="linkedin.png" class="icon-img" alt="LinkedIn">
-            </a>
-            <a href="https://orcid.org/0009-0000-7788-9897" target="_blank">
-              <img src="ORCID_iD.png" class="icon-img" alt="ORCID">
-            </a>
-            <a href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">
-              <img src="Google-scholar.png" class="icon-img" alt="Google Scholar">
-            </a>
-            <a href="https://github.com/boceklibusra" target="_blank">
-              <img src="GitHub-Logo.jpg" class="icon-img" alt="GitHub">
-            </a>
-          </div>
+      <a href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">
+        <img src="linkedin.png" class="icon-img">
+      </a>
+      <a href="https://orcid.org/0009-0000-7788-9897" target="_blank">
+        <img src="ORCID_iD.png" class="icon-img">
+      </a>
+      <a href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">
+        <img src="Google-scholar.png" class="icon-img">
+      </a>
+      <a href="https://github.com/boceklibusra" target="_blank">
+        <img src="GitHub-Logo.jpg" class="icon-img">
+      </a>
+    </div>
+  </div>
 
-  
-
-</div>
-
-  <!-- Right text -->
+  <!-- RIGHT -->
   <div class="content">
 
     <h1>About Me</h1>
@@ -230,12 +228,6 @@ li {
     <a href="Busra_Bocekli_CV.pdf" target="_blank" class="btn">Curriculum Vitae (CV)</a>
 
   </div>
-
-    <footer class="footer">
-      <a href="contact.html">Contact</a>
-      <div class="line"></div>
-      © 2026 Busra Bocekli. All rights reserved.
-    </footer>
 
 </div>
 
