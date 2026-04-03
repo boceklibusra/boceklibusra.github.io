@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Busra Bocekli</title>
 
-<!-- Google Font (similar to example) -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 * { box-sizing: border-box; }
@@ -53,16 +53,14 @@ body {
 .main {
   flex: 1;
   position: relative;
-  background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('busra.png') center / cover no-repeat;
+  background: url('busra.png') center center / cover no-repeat; /* original photo */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 110px;
+  padding: 40px 60px 120px 60px;
 }
 
-/* Big text boxes */
+/* Text section */
 .overlay {
   margin-left: 60px;
   width: 70%;
@@ -75,11 +73,15 @@ body {
   color: white;
   text-decoration: none;
   display: block;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.25);
   animation: fadeUp 0.9s ease both;
 }
 
-.block:last-child { border-bottom: none; }
+/* Move ONLY first item slightly down (~1 cm) */
+.block:first-child {
+  margin-top: 38px;
+}
+
 .block:nth-child(2) { animation-delay: 0.15s; }
 .block:nth-child(3) { animation-delay: 0.3s; }
 
@@ -88,33 +90,32 @@ body {
   text-shadow: 0 0 18px rgba(255,255,255,0.45);
 }
 
-/* Footer icons */
+/* Footer icons centered bottom */
 .footer {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(30,30,30,0.9);
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 20px;
+  gap: 18px;
 }
 
 .icon {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 20px;
   text-decoration: none;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  font-weight: bold;
 }
 
-.twitter { background: #1DA1F2; }
 .linkedin { background: #0077B5; }
 .orcid { background: #A6CE39; }
+.scholar { background: #4285F4; }
 .github { background: #000; }
 
 @keyframes fadeUp {
@@ -161,10 +162,10 @@ body {
 
   <!-- Footer icons -->
   <div class="footer">
-    <a class="icon twitter" href="#">T</a>
-    <a class="icon linkedin" href="https://www.linkedin.com" target="_blank">in</a>
-    <a class="icon orcid" href="https://orcid.org" target="_blank">iD</a>
-    <a class="icon github" href="https://github.com" target="_blank">GH</a>
+    <a class="icon linkedin" href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">in</a>
+    <a class="icon orcid" href="https://orcid.org/0009-0000-7788-9897" target="_blank">iD</a>
+    <a class="icon scholar" href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">GS</a>
+    <a class="icon github" href="https://github.com/boceklibusra" target="_blank">GH</a>
   </div>
 
 </div>
