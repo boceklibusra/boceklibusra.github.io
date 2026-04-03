@@ -1,148 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Busra Bocekli | Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Busra Bocekli</title>
 
-  <style>
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      height: 100%;
-    }
+<!-- Google Font (similar to example) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-    .layout {
-      display: flex;
-      min-height: 100vh;
-    }
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 
-    /* Sidebar */
-    .sidebar {
-      width: 280px;
-      background: #17191d;
-      color: white;
-      padding-top: 50px;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
-    .name {
-      padding: 0 40px 30px;
-      line-height: 1.5;
-      font-size: 18px;
-    }
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
 
-    .menu a {
-      display: block;
-      padding: 18px 40px;
-      color: white;
-      text-decoration: none;
-      border-left: 4px solid transparent;
-    }
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #1c1c1c;
+  color: white;
+  padding-top: 50px;
+}
 
-    .menu a:hover,
-    .menu a.active {
-      background: #4a4a4a;
-      border-left: 4px solid white;
-    }
+.name {
+  padding: 0 30px 30px;
+  font-size: 18px;
+  line-height: 1.5;
+}
 
-    /* Main area */
-    .main {
-      flex: 1;
-      min-height: 100vh;
+.menu a {
+  display: block;
+  padding: 16px 30px;
+  color: white;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+}
 
-      /* ✅ YOUR IMAGE HERE */
-      background:
-        linear-gradient(rgba(30,18,10,0.6), rgba(30,18,10,0.6)),
-        url('busra.png') center center / cover no-repeat;
+.menu a:hover,
+.menu a.active {
+  background: #555;
+  border-left: 4px solid white;
+}
 
-      display: flex;
-      align-items: center;
-      padding: 40px 60px;
-    }
+/* Main */
+.main {
+  flex: 1;
+  position: relative;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('busra.png') center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    /* Big clickable boxes */
-    .overlay-links {
-      border: 3px solid white;
-      width: 70%;
-    }
+/* Big text boxes */
+.overlay {
+  margin-left: 60px;
+  width: 70%;
+  border: 3px solid white;
+}
 
-    .panel-link {
-      display: block;
-      font-size: 64px;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-      padding: 30px;
-      border-bottom: 3px solid white;
-    }
+.block {
+  padding: 30px;
+  font-size: 70px;
+  font-weight: 800;
+  color: white;
+  border-bottom: 3px solid white;
+  text-decoration: none;
+  display: block;
+}
 
-    .panel-link:last-child {
-      border-bottom: none;
-    }
+.block:last-child { border-bottom: none; }
 
-    .panel-link:hover {
-      background: rgba(255,255,255,0.15);
-    }
+.block:hover {
+  background: rgba(255,255,255,0.15);
+}
 
-    /* Mobile */
-    @media (max-width: 900px) {
-      .layout {
-        flex-direction: column;
-      }
+/* Footer icons */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(30,30,30,0.9);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
 
-      .sidebar {
-        width: 100%;
-      }
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
 
-      .main {
-        padding: 20px;
-      }
+.twitter { background: #1DA1F2; }
+.linkedin { background: #0077B5; }
+.orcid { background: #A6CE39; }
+.github { background: #000; }
 
-      .overlay-links {
-        width: 100%;
-      }
-
-      .panel-link {
-        font-size: 40px;
-      }
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
 <div class="layout">
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="name">
-      Busra<br>
-      Bocekli,<br>
-      PhD Student
-    </div>
-
-    <div class="menu">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="research.html">Research</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="contact.html">Contact</a>
-    </div>
+<div class="sidebar">
+  <div class="name">
+    Busra<br>
+    Bocekli,<br>
+    PhD Student
   </div>
 
-  <!-- Main -->
-  <div class="main">
-
-    <div class="overlay-links">
-      <a class="panel-link" href="research.html">Earthquakes.</a>
-      <a class="panel-link" href="teaching.html">Teaching.</a>
-      <a class="panel-link" href="about.html">Engineering.</a>
-    </div>
-
+  <div class="menu">
+    <a class="active" href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="contact.html">Contact</a>
   </div>
+</div>
+
+<div class="main">
+
+  <div class="overlay">
+    <a class="block" href="research.html">Research.</a>
+    <a class="block" href="teaching.html">Teaching.</a>
+    <a class="block" href="experience.html">Experiences.</a>
+  </div>
+
+  <!-- Footer icons -->
+  <div class="footer">
+    <a class="icon twitter" href="#">T</a>
+    <a class="icon linkedin" href="https://www.linkedin.com" target="_blank">in</a>
+    <a class="icon orcid" href="https://orcid.org" target="_blank">iD</a>
+    <a class="icon github" href="https://github.com" target="_blank">GH</a>
+  </div>
+
+</div>
 
 </div>
 
