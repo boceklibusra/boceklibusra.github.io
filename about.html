@@ -24,27 +24,26 @@ body {
   background: #1c1c1c;
   color: white;
   padding-top: 50px;
-  flex-shrink: 0;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 👈 pushes footer down */
+  justify-content: space-between;
 }
 
+/* Name */
 .name {
-  padding: 0 30px 30px;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 400;
+  padding: 0 30px 20px;
+  font-size: 16px;  /* ↓ consistent */
+  line-height: 1.4;
 }
 
+/* Menu */
 .menu a {
   display: block;
-  padding: 16px 30px;
+  padding: 14px 30px;
   color: white;
   text-decoration: none;
   border-left: 4px solid transparent;
-  font-weight: 400; /* NOT bold */
+  font-size: 14px; /* ↓ consistent */
 }
 
 .menu a:hover,
@@ -53,37 +52,34 @@ body {
   border-left: 4px solid white;
 }
 
-/* Sidebar footer (bottom) */
+/* Footer */
 .sidebar-footer {
-  padding: 20px 30px;
+  padding: 18px 30px;
 }
 
 .line {
-  width: 160px;
+  width: 140px;
   height: 1px;
-  background: rgba(255,255,255,0.7);
-  margin-bottom: 8px;
+  background: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
 }
 
 .sidebar-footer p {
   margin: 0;
-  font-size: 12px;
-  color: rgba(255,255,255,0.8);
-  font-weight: 400;
+  font-size: 11px; /* ↓ consistent */
+  color: rgba(255,255,255,0.75);
 }
 
-/* Main layout */
+/* Main */
 .main {
   flex: 1;
   background: #e9e7e4;
-  padding: 50px 70px;
-
+  padding: 30px 50px; /* ↓ reduced */
   display: flex;
-  gap: 50px;
-  align-items: flex-start;
+  gap: 40px;
 }
 
-/* LEFT SIDE */
+/* LEFT */
 .left-column {
   display: flex;
   flex-direction: column;
@@ -91,8 +87,8 @@ body {
 }
 
 .profile-photo {
-  width: 260px;
-  height: 260px;
+  width: 240px; /* slightly smaller */
+  height: 240px;
   object-fit: cover;
 }
 
@@ -100,14 +96,13 @@ body {
 .footer-icons {
   display: flex;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .icon-img {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
 .icon-img:hover {
@@ -118,57 +113,56 @@ body {
 /* Buttons */
 .btn {
   display: block;
-  width: 220px;
+  width: 200px;
   text-align: center;
-  margin-top: 20px;
-  padding: 12px;
+  margin-top: 14px;
+  padding: 10px;
   background: #2f3138;
   color: white;
   text-decoration: none;
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* RIGHT TEXT */
 .content {
-  max-width: 800px;
+  max-width: 700px;
 }
 
+/* Title */
 h1 {
-  font-size: 48px;
+  font-size: 34px;  /* ↓ reduced from 48 */
   font-weight: 500;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
+/* Paragraph */
 p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-li {
-  font-size: 16px;
+  font-size: 14px;  /* ↓ consistent */
+  line-height: 1.6;
   margin-bottom: 14px;
+}
+
+/* List */
+li {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .main {
     flex-direction: column;
-    padding: 30px;
+    padding: 25px;
   }
 
   .profile-photo {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 </style>
@@ -178,7 +172,6 @@ li {
 
 <div class="sidebar">
 
-  <!-- TOP -->
   <div>
     <div class="name">
       Busra<br>
@@ -193,12 +186,9 @@ li {
     </div>
   </div>
 
-  <!-- BOTTOM -->
   <div class="sidebar-footer">
     <div class="line"></div>
-    <p style="color: rgba(255,255,255,0.8); font-weight: 400;">
-      © 2026 Busra Bocekli. All rights reserved.</p>
-    
+    <p>© 2026 Busra Bocekli. All rights reserved.</p>
   </div>
 
 </div>
@@ -235,7 +225,11 @@ li {
     <h1>About Me</h1>
 
     <p>
-      I am a Ph.D. student in geotechnical earthquake engineering with a background in civil engineering and architecture. My research focuses on ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking.
+      I am a Ph.D. student in geotechnical earthquake engineering with a background in civil engineering and architecture.
+    </p>
+
+    <p>
+      My research focuses on ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking.
     </p>
 
     <p>
