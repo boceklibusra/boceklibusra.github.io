@@ -93,17 +93,21 @@ body {
 .main {
   flex: 1;
   background: url('busra.png') center / cover no-repeat;
-  padding: 30px 50px 100px;
+  position: relative;   /* 👈 IMPORTANT */
+  height: 100vh;        /* 👈 prevents scrolling */
+  overflow: hidden;     /* 👈 removes scroll */
 }
 
 /* Overlay box */
 .overlay {
-  width: 45%;              /* 👈 narrower (was 60%) */
-  margin-top: 420px;       /* 👈 pushes it downward */
-  margin-left: 100px;
-  margin-right: 80px;
-  border: 1px solid white;
+  position: absolute;
 
+  top: 80px;        /* 👈 move vertically into red area */
+  right: 80px;      /* 👈 keep on right side */
+
+  width: 40%;
+
+  border: 1px solid white;
   background: rgba(28, 28, 28, 0.6);
   backdrop-filter: blur(4px);
 
