@@ -4,178 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Busra Bocekli | About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: #e9e7e4;
+      display: flex;
+      min-height: 100vh;
       color: #1f1f1f;
     }
 
-    .page {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 34px 42px 48px;
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 44px;
-    }
-
+    /* Sidebar (same as homepage) */
     .sidebar {
-      padding-top: 8px;
+      width: 260px;
+      background: #1c1c1c;
+      color: white;
+      padding-top: 50px;
+      flex-shrink: 0;
     }
 
-    .profile-photo {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
+    .name {
+      padding: 0 30px 30px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .menu a {
       display: block;
-      background: #d9d9d9;
-    }
-
-    .icon-row {
-      display: flex;
-      gap: 14px;
-      margin: 22px 0 34px;
-      flex-wrap: wrap;
-    }
-
-    .icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 16px 30px;
       color: white;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 16px;
+      border-left: 4px solid transparent;
     }
 
-    .linkedin { background: #0077b5; }
-    .orcid { background: #a6ce39; }
-    .scholar { background: #4285f4; }
-    .github { background: #111111; }
+    .menu a:hover,
+    .menu a.active {
+      background: #555;
+      border-left: 4px solid white;
+    }
 
-    .sidebar-btn {
-      width: 100%;
-      display: block;
-      text-align: center;
-      text-decoration: none;
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 40px 60px;
+      background: #e9e7e4;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2.8rem;
+      font-weight: 600; /* not bold */
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 14px;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      font-weight: 400; /* not bold */
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
       background: #2f3138;
       color: white;
-      padding: 12px 16px;
-      margin-bottom: 18px;
+      text-decoration: none;
       border-radius: 3px;
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 14px;
     }
 
-    .content h1 {
-      margin: 6px 0 26px;
-      font-size: 3.2rem;
-      line-height: 1;
-      letter-spacing: -1px;
-    }
-
-    .intro {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin: 0 0 24px;
-    }
-
-    .intro strong,
-    .content strong {
-      font-weight: 700;
-    }
-
-    .content ul {
-      margin: 0;
-      padding-left: 22px;
-    }
-
-    .content li {
-      margin-bottom: 18px;
-      line-height: 1.7;
-      font-size: 1.05rem;
-    }
-
-    .content p {
-      margin: 0 0 18px;
-      line-height: 1.7;
-      font-size: 1.05rem;
-    }
-
-    a.inline-link {
-      color: inherit;
-      text-decoration-thickness: 1px;
-    }
-
-    @media (max-width: 900px) {
-      .page {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 24px 20px 36px;
-      }
-
-      .sidebar {
-        max-width: 360px;
-      }
-
-      .content h1 {
-        font-size: 2.4rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="page">
-    <aside class="sidebar">
-      <img src="busra-about.jpg" alt="Busra Bocekli portrait" class="profile-photo" />
 
-      <div class="icon-row">
-        <a class="icon linkedin" href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">in</a>
-        <a class="icon orcid" href="https://orcid.org/0009-0000-7788-9897" target="_blank">iD</a>
-        <a class="icon scholar" href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">GS</a>
-        <a class="icon github" href="https://github.com/boceklibusra" target="_blank">GH</a>
-      </div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="name">
+      Busra<br>
+      Bocekli,<br>
+      PhD Student
+    </div>
 
-      <a href="contact.html" class="sidebar-btn">Contact</a>
-      <a href="Busra_Bocekli_CV.pdf" class="sidebar-btn" target="_blank">Curriculum Vitae (CV)</a>
-    </aside>
-
-    <main class="content">
-      <h1>About Me</h1>
-
-      <p class="intro">
-        I’m a <strong>Ph.D. student in geotechnical earthquake engineering</strong> with a background in civil engineering and architecture. My research focuses on <strong>ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking</strong>. I am also passionate about <strong>teaching, technical communication, and interdisciplinary engineering research</strong>.
-      </p>
-
-      <ul>
-        <li>
-          My <strong>research and technical writing</strong> center on improving seismic hazard understanding by integrating community-reported shaking data with instrumental records, especially for regions with sparse station coverage.
-        </li>
-        <li>
-          I work on <strong>ground-motion models, path attenuation, and nonstationary spatial correlation</strong>, with particular interest in California earthquake datasets and DYFI-informed PGA estimation.
-        </li>
-        <li>
-          I have experience as a <strong>teaching assistant and lab instructor</strong> in soil mechanics and foundation engineering, where I support students through experiments, grading, and technical explanations.
-        </li>
-        <li>
-          My academic goal is to continue contributing to <strong>research, teaching, and engineering practice</strong> through work that connects earthquake engineering, data analysis, and practical problem-solving.
-        </li>
-        <li>
-          In addition to academic work, I value <strong>clear communication, collaboration, and mentorship</strong>, and I enjoy building bridges between technical research and real-world application.
-        </li>
-      </ul>
-
-      <p>
-        I hold degrees in <strong>civil engineering</strong> and <strong>architecture</strong>, and I am currently pursuing my Ph.D. at <strong>Old Dominion University</strong>. You can view my background, experience, and recent work through the links on this page or by opening my <a class="inline-link" href="Busra_Bocekli_CV.pdf" target="_blank"><strong>CV</strong></a>.
-      </p>
-    </main>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Me</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
+
+  <!-- Main content -->
+  <div class="main">
+
+    <h1>About Me</h1>
+
+    <p>
+      I am a Ph.D. student in geotechnical earthquake engineering with a background in civil engineering and architecture. My research focuses on ground-motion modeling, DYFI intensity data, and spatial correlation of earthquake shaking.
+    </p>
+
+    <p>
+      I have experience in teaching and laboratory instruction in soil mechanics and foundation engineering, where I support students in understanding experimental concepts and data interpretation.
+    </p>
+
+    <p>
+      My work combines research, teaching, and engineering practice, with an emphasis on clear technical communication and interdisciplinary collaboration.
+    </p>
+
+    <ul>
+      <li>Ground-motion modeling and seismic hazard analysis</li>
+      <li>DYFI intensity data integration</li>
+      <li>Teaching and laboratory instruction</li>
+      <li>Interdisciplinary engineering research</li>
+    </ul>
+
+    <a href="Busra_Bocekli_CV.pdf" target="_blank" class="btn">Download CV</a>
+
+  </div>
+
 </body>
 </html>
