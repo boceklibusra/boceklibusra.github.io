@@ -35,7 +35,7 @@ body {
 /* Name */
 .name {
   padding: 0 30px 20px;
-  font-size: 16px;   /* ↓ smaller */
+  font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
 }
@@ -61,7 +61,7 @@ body {
   color: white;
   text-decoration: none;
   border-left: 4px solid transparent;
-  font-size: 14px;  /* ↓ smaller */
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -92,27 +92,24 @@ body {
 /* Main */
 .main {
   flex: 1;
-  background: linear-gradient(rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)),
-    url('busra.png') center / cover no-repeat;
+  background:
+    linear-gradient(rgba(28, 28, 28, 0.35), rgba(28, 28, 28, 0.35)),
+    url('busra.png') center center / contain no-repeat;
+  background-color: #2a2a2a;
 
-  position: relative;   /* 👈 IMPORTANT */
-  height: 100vh;        /* 👈 prevents scrolling */
-  overflow: hidden;     /* 👈 removes scroll */
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Overlay box */
 .overlay {
   position: absolute;
-
-  top: 3px;        /* 👈 move vertically into red area */
-  right: 3px;      /* 👈 keep on right side */
-
+  top: 20px;
+  left: 20px;   /* moved to left side */
   width: 40%;
-
   border: 1px solid white;
   background: rgba(28, 28, 28, 0.6);
-  
-
   padding: 10px 0;
   border-radius: 6px;
 }
@@ -120,15 +117,14 @@ body {
 /* Main titles */
 .block {
   display: block;
-  font-size: 30px;   /* ↓ reduced from 68 */
-  font-weight: 600;  /* softer than 800 */
+  font-size: 30px;
+  font-weight: 600;
   color: white;
-    
   text-decoration: none;
   padding: 26px 32px;
   border-bottom: 1px solid white;
   line-height: 1.1;
-  text-align: right;   /* 👈 THIS does it */
+  text-align: left;   /* changed from right to left */
 }
 
 .block:last-child {
@@ -147,8 +143,9 @@ body {
   .sidebar { width: 100%; }
 
   .overlay {
-    width: 100%;
-    margin-top: 40px;
+    width: calc(100% - 40px);
+    left: 20px;
+    top: 20px;
   }
 
   .block {
