@@ -1,8 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Research | Busra Bocekli</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 260px;
+  background: #1c1c1c;
+  color: white;
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+/* Name */
+
+.name {
+  padding: 0 30px 20px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+
+/* Icons */
+
+.footer-icons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-left: 30px;
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Menu */
+
+.menu a {
+  display: block;
+
+  padding: 14px 30px;
+
+  color: white;
+  text-decoration: none;
+
+  border-left: 4px solid transparent;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: #555;
+  border-left: 4px solid white;
+}
+
+
+/* Footer */
+
+.footer-text {
+  padding: 20px 30px;
+}
+
+.line {
+  width: 140px;
+  height: 1px;
+  background: rgba(255,255,255,0.7);
+  margin-bottom: 6px;
+}
+
+.footer-text p {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+
+  min-height: 100vh;
+
+  background: #f5f5f5;
+
+  padding: 55px 70px 80px;
+}
+
+
+/* Main content width */
+
+.content {
+  max-width: 950px;
+}
+
+
+/* Page title */
+
+.content h1 {
+  font-size: 34px;
+  font-weight: 600;
+
+  color: #1c1c1c;
+
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 2px solid #1c1c1c;
+}
+
+
+/* Main headings */
+
+.content h2 {
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #1c1c1c;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+/* Subheadings */
+
+.content h3 {
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #333;
+
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+
+/* Paragraphs */
+
+.content p {
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #333;
+
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+
+/* Lists */
+
+.content ul,
+.content ol {
+  padding-left: 22px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content li {
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  margin-bottom: 12px;
+
+  color: #333;
+}
+
+
+/* Links */
+
+.content a {
+  color: #444;
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.content a:hover {
+  color: #777;
+}
+
+
+/* =========================
+   RESEARCH SECTION CARDS
+========================= */
+
+.research-section {
+  background: white;
+
+  padding: 25px 30px;
+
+  margin-bottom: 30px;
+
+  border-left: 4px solid #1c1c1c;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+
+/* Prevent extra space at top */
+
+.research-section h2:first-child {
+  margin-top: 0;
+}
+
+
+/* Research position */
+
+.research-position {
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    padding-top: 30px;
+  }
+
+  .main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 35px 25px 60px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="layout">
+
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+<div class="sidebar">
+
+  <div>
+
+    <div class="name">
+      Busra<br>
+      Bocekli,<br>
+      PhD Candidate
+    </div>
+
+
+    <div class="footer-icons">
+
+      <a href="#" target="_blank">
+        <img src="linkedin.png"
+             class="icon-img"
+             alt="LinkedIn">
+      </a>
+
+      <a href="#" target="_blank">
+        <img src="ORCID_iD.png"
+             class="icon-img"
+             alt="ORCID">
+      </a>
+
+      <a href="#" target="_blank">
+        <img src="Google_scholar.png"
+             class="icon-img"
+             alt="Google Scholar">
+      </a>
+
+      <a href="#" target="_blank">
+        <img src="GitHub-Logo.jpg"
+             class="icon-img"
+             alt="GitHub">
+      </a>
+
+    </div>
+
+
+    <div class="menu">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About Me
+      </a>
+
+      <a class="active"
+         href="research.html">
+        Research
+      </a>
+
+      <a href="teaching.html">
+        Teaching
+      </a>
+
+      <a href="experience.html">
+        Experience
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-text">
+
+    <div class="line"></div>
+
+    <p>
+      © 2026 Busra Bocekli.
+      All rights reserved.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<div class="main">
+
 <div class="content">
 
-  <h1>Research</h1>
+
+<h1>Research</h1>
+
+
+<!-- =========================
+     RESEARCH INTERESTS
+========================= -->
+
+<div class="research-section">
 
   <h2>Research Interests</h2>
+
   <p>
     Earthquake Engineering; Engineering Seismology; Ground-Motion Modeling;
     Seismic Hazard and Risk; Spatial Correlation of Ground Motions;
@@ -10,69 +434,135 @@
     Data-Driven and Statistical Methods in Earthquake Engineering.
   </p>
 
+</div>
+
+
+<!-- =========================
+     JOURNAL PUBLICATIONS
+========================= -->
+
+<div class="research-section">
 
   <h2>Peer-Reviewed Journal Publications</h2>
+
   <ol>
+
     <li>
       Wang, P., <strong>Bocekli, B.</strong>, Yang, J., Brandenberg, S. J.,
       &amp; Stewart, J. P. (2026).
       “Nonstationary Spatial Correlation of Earthquake Ground Motions in California.”
       <em>Earthquake Spectra</em>, <em>42</em>(3), e70083.
-      <a href="https://doi.org/10.1002/esp4.70083" target="_blank">
+      <a href="https://doi.org/10.1002/esp4.70083"
+         target="_blank">
         https://doi.org/10.1002/esp4.70083
       </a>
     </li>
+
   </ol>
 
+</div>
+
+
+<!-- =========================
+     MANUSCRIPTS UNDER REVIEW
+========================= -->
+
+<div class="research-section">
 
   <h2>Manuscripts Under Review</h2>
+
   <ol>
+
     <li>
       <strong>Bocekli, B.</strong>, &amp; Wang, P.
       “Can DYFI Intensity Data Improve Path Attenuation Modeling Under Sparse
       Instrumental Coverage?”
       <em>Earthquake Spectra</em>. Under review.
     </li>
+
   </ol>
 
+</div>
+
+
+<!-- =========================
+     MANUSCRIPTS IN PREPARATION
+========================= -->
+
+<div class="research-section">
 
   <h2>Manuscripts in Preparation</h2>
+
   <ol>
+
     <li>
       <strong>Bocekli, B.</strong>, &amp; Wang, P.
       “Evaluating Site Effects in DYFI Intensity Data Against Ground-Motion Recordings.”
       In preparation.
     </li>
+
   </ol>
 
+</div>
+
+
+<!-- =========================
+     CONFERENCE PROCEEDINGS
+========================= -->
+
+<div class="research-section">
 
   <h2>Refereed Conference Proceedings</h2>
+
   <ol>
+
     <li>
       <strong>Bocekli, B.</strong>, Wang, P., et al. (2026).
       “Do ‘Did You Feel It?’ Intensity Data Provide Consistent Path Attenuation
       with Instrumental Recordings?”
-      <em>Proceedings of the 13th National Conference on Earthquake Engineering (13NCEE)</em>,
+      <em>
+        Proceedings of the 13th National Conference on Earthquake Engineering
+        (13NCEE)
+      </em>,
       Portland, Oregon, USA.
     </li>
+
 
     <li>
       Wang, P., &amp; <strong>Bocekli, B.</strong> (2025).
       “A New Methodology for Earthquake Ground Motion Spatial Correlation.”
       <em>Geotechnical Frontiers 2025</em>, pp. 170–180.
-      <a href="https://doi.org/10.1061/9780784485996.017" target="_blank">
+
+      <a href="https://doi.org/10.1061/9780784485996.017"
+         target="_blank">
         https://doi.org/10.1061/9780784485996.017
       </a>
     </li>
+
   </ol>
 
+</div>
+
+
+<!-- =========================
+     RESEARCH EXPERIENCE
+========================= -->
+
+<div class="research-section">
 
   <h2>Research Experience</h2>
 
-  <h3>Graduate Research Assistant / Doctoral Researcher</h3>
-  <p><strong>Old Dominion University</strong> | 2023–Present</p>
+  <h3>
+    Graduate Research Assistant / Doctoral Researcher
+  </h3>
+
+  <p class="research-position">
+    <strong>Old Dominion University</strong> | 2023–Present
+  </p>
+
 
   <ul>
+
     <li>
       Led the development of empirical frameworks integrating
       <em>Did You Feel It?</em> (DYFI) macroseismic intensity with instrumental
@@ -81,12 +571,14 @@
       path-attenuation behavior.
     </li>
 
+
     <li>
       Designed and implemented a large-scale data integration workflow combining
       1,456 earthquakes, more than 86,000 instrumental ground-motion records,
       over 560,000 DYFI reports, and approximately 14,826 paired
       DYFI–ground-motion observations.
     </li>
+
 
     <li>
       Developed and systematically evaluated linear, exponential, quadratic,
@@ -95,11 +587,13 @@
       path, and site effects.
     </li>
 
+
     <li>
       Established a model-evaluation framework using adjusted R<sup>2</sup>,
       mean squared error (MSE), residual diagnostics, hypothesis testing,
       and comparisons with established ergodic ground-motion models.
     </li>
+
 
     <li>
       Investigated the robustness of DYFI-derived ground-motion estimates using
@@ -107,11 +601,13 @@
       their implications for conversion modeling and path attenuation.
     </li>
 
+
     <li>
       Co-developed a nonstationary, subregion-dependent spatial correlation
       framework for earthquake ground motions using multi-event Pearson
       correlations, Fisher transformation, spatial gridding, and Bayesian regression.
     </li>
+
 
     <li>
       Evaluated regional variability in spatial ground-motion dependence across
@@ -119,25 +615,41 @@
       statewide stationary correlation model.
     </li>
 
+
     <li>
       Contributed to the translation of research methodology into reproducible
       computational tools, including an open-source R implementation and
       GIS-based spatial parameter products for PGA, PGV, and spectral acceleration
       across multiple oscillator periods.
     </li>
+
   </ul>
 
+</div>
+
+
+<!-- =========================
+     SELECTED RESEARCH PROJECTS
+========================= -->
+
+<div class="research-section">
 
   <h2>Selected Research Projects</h2>
 
-  <h3>DYFI-Based Ground-Motion Conversion and Path Attenuation Modeling</h3>
+
+  <h3>
+    DYFI-Based Ground-Motion Conversion and Path Attenuation Modeling
+  </h3>
+
   <ul>
+
     <li>
       <strong>Research objective:</strong>
       Led research evaluating whether <em>Did You Feel It?</em> (DYFI)
       macroseismic intensity data can provide reliable ground-motion estimates
       and reproduce path-attenuation trends observed in instrumental recordings.
     </li>
+
 
     <li>
       <strong>Methods:</strong>
@@ -148,6 +660,7 @@
       behavior using residual diagnostics and statistical hypothesis testing.
     </li>
 
+
     <li>
       <strong>Key result/contribution:</strong>
       Developed an upgraded DYFI-to-PGA modeling framework and demonstrated
@@ -155,17 +668,23 @@
       supporting the use of community-reported intensity data for ground-motion
       and attenuation studies in regions with sparse instrumental coverage.
     </li>
+
   </ul>
 
 
-  <h3>Nonstationary Spatial Correlation Modeling of Earthquake Ground Motions</h3>
+  <h3>
+    Nonstationary Spatial Correlation Modeling of Earthquake Ground Motions
+  </h3>
+
   <ul>
+
     <li>
       <strong>Research objective:</strong>
       Contributed to research characterizing regional variability in earthquake
       ground-motion spatial correlation and assessing the limitations of applying
       a single stationary correlation model across California.
     </li>
+
 
     <li>
       <strong>Methods:</strong>
@@ -175,12 +694,25 @@
       structures.
     </li>
 
+
     <li>
       <strong>Key result/contribution:</strong>
       Helped develop and evaluate a nonstationary spatial-correlation framework
       that captures regional differences in ground-motion dependence and provides
       a more locally representative alternative to statewide stationary models.
     </li>
+
   </ul>
 
 </div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
