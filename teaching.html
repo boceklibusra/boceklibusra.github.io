@@ -285,70 +285,79 @@ body {
   }
 
 }
+/* =========================
+   RESPONSIVE
+========================= */
 
-</style>
-  /* =========================
+@media (max-width: 900px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+    padding: 35px 25px 60px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+}
+
+
+/* =========================
    TEACHING PHOTO GALLERY
 ========================= */
 
 .lab-gallery {
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .gallery-caption {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: #333;
-
-  margin-top: 0;
-  margin-bottom: 12px;
+  margin: 0 0 10px 0;
 }
 
 .gallery-row {
-  display: flex;
-  gap: 10px;
+  display: grid;
+
+  /* 5 equal-sized photos in ONE row */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 8px;
 
   width: 100%;
+  max-width: 100%;
 }
 
 .gallery-row img {
-  flex: 1;
-  min-width: 0;
-
-  height: 150px;
+  width: 100%;
+  height: 110px;
 
   object-fit: cover;
 
+  display: block;
+
   border-radius: 3px;
 
-  box-shadow:
-    0 1px 5px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
 }
 
-
-/* Responsive gallery */
-
-@media (max-width: 900px) {
-
-  .gallery-row {
-    flex-wrap: wrap;
-  }
-
-  .gallery-row img {
-    flex: 1 1 calc(50% - 10px);
-    height: 160px;
-  }
-
-}
-
-@media (max-width: 550px) {
-
-  .gallery-row img {
-    flex: 1 1 100%;
-  }
-
-}
+</style>
+ 
 </head>
 
 
