@@ -536,23 +536,45 @@ and review.
 </ul>
   <div class="lab-gallery">
 
-  <p class="gallery-caption">
+  <p class="gallery-caption" id="galleryCaption">
     Selected photographs from Compaction Test
   </p>
 
-  <div class="gallery-row">
+  <div class="gallery-carousel">
 
-    <img src="C2.png"
-         alt="Soil Mechanics Laboratory">
+    <button
+      class="gallery-btn gallery-prev"
+      id="galleryPrev"
+      type="button">
+      &#10094;
+    </button>
 
-    <img src="C3.png"
-         alt="Soil Mechanics Laboratory">
+    <div class="gallery-row">
 
-    <img src="C4.png"
-         alt="Soil Mechanics Laboratory">
-    
-    <img src="C5.png"
-         alt="Soil Mechanics Laboratory">
+      <img id="galleryImg1"
+           src="C2.png"
+           alt="Soil Mechanics Laboratory">
+
+      <img id="galleryImg2"
+           src="C3.png"
+           alt="Soil Mechanics Laboratory">
+
+      <img id="galleryImg3"
+           src="C4.png"
+           alt="Soil Mechanics Laboratory">
+
+      <img id="galleryImg4"
+           src="C5.png"
+           alt="Soil Mechanics Laboratory">
+
+    </div>
+
+    <button
+      class="gallery-btn gallery-next"
+      id="galleryNext"
+      type="button">
+      &#10095;
+    </button>
 
   </div>
 
@@ -640,7 +662,84 @@ to foundation-related problems.
 
 
 </div>
+</div>
 
+</div>
+
+<script>
+
+const galleryGroups = [
+  {
+    caption: "Selected photographs from Compaction Test",
+    images: [
+      "C1.png",
+      "C2.png",
+      "C3.png",
+      "C4.png"
+    ]
+  },
+
+  {
+    caption: "Selected photographs from Direct Shear Test",
+    images: [
+      "D1.png",
+      "D2.png",
+      "D3.png",
+      "D4.png"
+    ]
+  }
+];
+
+let currentGroup = 0;
+
+const imageElements = [
+  document.getElementById("galleryImg1"),
+  document.getElementById("galleryImg2"),
+  document.getElementById("galleryImg3"),
+  document.getElementById("galleryImg4")
+];
+
+const captionElement =
+  document.getElementById("galleryCaption");
+
+function updateGallery() {
+  const group = galleryGroups[currentGroup];
+
+  captionElement.textContent = group.caption;
+
+  for (let i = 0; i < 4; i++) {
+    imageElements[i].src = group.images[i];
+  }
+}
+
+document
+  .getElementById("galleryNext")
+  .addEventListener("click", function() {
+
+    currentGroup =
+      (currentGroup + 1) % galleryGroups.length;
+
+    updateGallery();
+
+  });
+
+document
+  .getElementById("galleryPrev")
+  .addEventListener("click", function() {
+
+    currentGroup =
+      (currentGroup - 1 + galleryGroups.length)
+      % galleryGroups.length;
+
+    updateGallery();
+
+  });
+
+</script>
+
+</body>
+
+</html>
 </body>
 
 </html>
