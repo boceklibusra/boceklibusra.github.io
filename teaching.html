@@ -287,6 +287,68 @@ body {
 }
 
 </style>
+  /* =========================
+   TEACHING PHOTO GALLERY
+========================= */
+
+.lab-gallery {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.gallery-caption {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 10px;
+
+  width: 100%;
+}
+
+.gallery-row img {
+  flex: 1;
+  min-width: 0;
+
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 1px 5px rgba(0,0,0,0.08);
+}
+
+
+/* Responsive gallery */
+
+@media (max-width: 900px) {
+
+  .gallery-row {
+    flex-wrap: wrap;
+  }
+
+  .gallery-row img {
+    flex: 1 1 calc(50% - 10px);
+    height: 160px;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .gallery-row img {
+    flex: 1 1 100%;
+  }
+
+}
 </head>
 
 
@@ -467,6 +529,32 @@ and review.
 </li>
 
 </ul>
+  <div class="lab-gallery">
+
+  <p class="gallery-caption">
+    Selected photographs from Compaction Test
+  </p>
+
+  <div class="gallery-row">
+
+    <img src="C1.png"
+         alt="Soil Mechanics Laboratory">
+
+    <img src="C2.png"
+         alt="Soil Mechanics Laboratory">
+
+    <img src="C3.png"
+         alt="Soil Mechanics Laboratory">
+
+    <img src="C4.png"
+         alt="Soil Mechanics Laboratory">
+    
+    <img src="C5.png"
+         alt="Soil Mechanics Laboratory">
+
+  </div>
+
+</div>
 
 </div>
 
