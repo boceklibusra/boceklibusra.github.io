@@ -299,6 +299,37 @@ body {
 
 
 /* =========================
+   CENTERED TEACHING PHOTO
+========================= */
+
+.teaching-feature-photo {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+
+.teaching-feature-photo img {
+  width: 70%;
+  max-width: 600px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 1px 5px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
    TEACHING PHOTO GALLERY
 ========================= */
 
@@ -417,6 +448,10 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .teaching-feature-photo img {
+    width: 100%;
+  }
+
 }
 
 </style>
@@ -447,27 +482,31 @@ body {
     <div class="footer-icons">
 
       <a href="#" target="_blank">
-        <img src="linkedin.png"
-             class="icon-img"
-             alt="LinkedIn">
+        <img
+          src="linkedin.png"
+          class="icon-img"
+          alt="LinkedIn">
       </a>
 
       <a href="#" target="_blank">
-        <img src="ORCID_iD.png"
-             class="icon-img"
-             alt="ORCID">
+        <img
+          src="ORCID_iD.png"
+          class="icon-img"
+          alt="ORCID">
       </a>
 
       <a href="#" target="_blank">
-        <img src="Google_scholar.png"
-             class="icon-img"
-             alt="Google Scholar">
+        <img
+          src="Google_scholar.png"
+          class="icon-img"
+          alt="Google Scholar">
       </a>
 
       <a href="#" target="_blank">
-        <img src="GitHub-Logo.jpg"
-             class="icon-img"
-             alt="GitHub">
+        <img
+          src="GitHub-Logo.jpg"
+          class="icon-img"
+          alt="GitHub">
       </a>
 
     </div>
@@ -487,8 +526,9 @@ body {
         Research
       </a>
 
-      <a class="active"
-         href="teaching.html">
+      <a
+        class="active"
+        href="teaching.html">
         Teaching
       </a>
 
@@ -609,10 +649,24 @@ Laboratory Instructor
 </p>
 
 
-
 <h3>
 CEE 324 – Soil Mechanics Laboratory
 </h3>
+
+
+
+<!-- =========================
+     CENTERED TEACHING PHOTO
+========================= -->
+
+<div class="teaching-feature-photo">
+
+  <img
+    src="Teaching1.png"
+    alt="CEE 324 Soil Mechanics Laboratory">
+
+</div>
+
 
 
 <ul>
@@ -757,7 +811,6 @@ Homework Grader
 <strong>Old Dominion University</strong>
 | 2023–Present
 </p>
-
 
 
 <h3>
@@ -930,7 +983,6 @@ function updateGallery() {
 }
 
 
-
 document
   .getElementById("galleryNext")
   .addEventListener("click", function() {
@@ -942,7 +994,6 @@ document
     updateGallery();
 
   });
-
 
 
 document
