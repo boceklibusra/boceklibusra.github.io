@@ -461,9 +461,9 @@ body {
 
   <p>
     Earthquake Engineering; Engineering Seismology; Ground-Motion Modeling;
-    Seismic Hazard and Risk; Spatial Correlation of Ground Motions;
-    Geotechnical Earthquake Engineering; Human-Reported Earthquake Intensity;
-    Data-Driven and Statistical Methods in Earthquake Engineering.
+    Seismic Hazard and Risk; Geotechnical Earthquake Engineering;
+    Soil Dynamics and Cyclic Soil Behavior; Spatial Correlation and Non-Ergodic Ground Motions Modeling; 
+    Human-Reported Earthquake Intensity; Geospatial Analysis; Data-Driven and Statistical Methods in Earthquake Engineering.
   </p>
 
 </div>
@@ -572,7 +572,7 @@ body {
 
 
     <li>
-      Designed and implemented a large-scale data integration workflow combining
+      Designed reproducible large-scale data workflows in R and GIS combining
       1,456 earthquakes, more than 86,000 instrumental ground-motion records,
       over 560,000 DYFI reports, and approximately 14,826 paired
       DYFI–ground-motion observations.
@@ -604,22 +604,26 @@ body {
     <li>
       Co-developed a nonstationary, subregion-dependent spatial correlation
       framework for earthquake ground motions using multi-event Pearson
-      correlations, Fisher transformation, spatial gridding, and Bayesian regression.
+      correlations, Fisher transformation, spatial gridding, and Bayesian
+      regression;      evaluated regional variability across 322 California
+      subregions.
     </li>
 
 
     <li>
-      Evaluated regional variability in spatial ground-motion dependence across
-      322 California subregions and quantified improvements relative to a
-      statewide stationary correlation model.
+      Conducted geotechnical field investigations using three-component 
+      ambient-noise measurements to evaluate horizontal-to-vertical spectral ratio
+      (HVSR) methods for subsurface characterization and interpolation of stratigraphy
+      from limited boring information.
     </li>
 
 
     <li>
-      Contributed to the translation of research methodology into reproducible
-      computational tools, including an open-source R implementation and
-      GIS-based spatial parameter products for PGA, PGV, and spectral acceleration
-      across multiple oscillator periods.
+      Contributed to laboratory characterization of sand for a U.S. Air Force
+      STTR-funded resilient-basing project, including monotonic and cyclic direct
+      shear testing to determine frictional and dynamic soil properties under repeated
+      and high-frequency loading.
+      
     </li>
 
   </ul>
@@ -639,69 +643,140 @@ body {
   <h3>
     DYFI-Based Ground-Motion Conversion and Path Attenuation Modeling
   </h3>
+  <p class="research-position">
+    <strong>Doctoral Research </strong> | Old Dominion University
+  </p>
 
   <ul>
 
     <li>
       <strong>Research objective:</strong>
-      Led research evaluating whether <em>Did You Feel It?</em> (DYFI)
-      macroseismic intensity data can provide reliable ground-motion estimates
-      and reproduce path-attenuation trends observed in instrumental recordings.
+      Lead research evaluating whether DYFI macro seismic intensity observations
+      can provide reliable estimates of instrumental ground motions and reproduce
+      path-attenuation trends observed in recorded earthquake data.
     </li>
 
 
     <li>
       <strong>Methods:</strong>
-      Designed and implemented a workflow integrating instrumental ground-motion
-      records with both ZIP-code-based and 1-km geocoded DYFI reports; developed
-      MMI-to-PGA regression models incorporating magnitude, rupture distance,
-      and V<sub>S30</sub>; and evaluated model performance and attenuation
-      behavior using residual diagnostics and statistical hypothesis testing.
+     Developed workflows integrating instrumental records with ZIP-code-based and
+      1-km geocoded DYFI observations; developed MMI-to-PGA models incorporating
+      magnitude, rupture distance, and  V<sub>S30</sub>; and evaluated predictive
+      performance and attenuation behavior through residual analysis, statistical
+      testing, and comparison with established models.
     </li>
 
 
     <li>
       <strong>Key result/contribution:</strong>
       Developed an upgraded DYFI-to-PGA modeling framework and demonstrated
-      consistency between ZIP-code-based and 1-km geocoded DYFI datasets,
-      supporting the use of community-reported intensity data for ground-motion
-      and attenuation studies in regions with sparse instrumental coverage.
+      consistency between ZIP-code-based and 1-km geocoded datasets, supporting
+      the potential use of community-reported earthquake observations in regions
+      with sparse instrumental coverage.
     </li>
 
   </ul>
 
-
   <h3>
-    Nonstationary Spatial Correlation Modeling of Earthquake Ground Motions
+    Cyclic Direct Shear Characterization of Sand for Rapidly Deployable Hardened Shelters
   </h3>
+
+  <p class="research-position">
+    <strong>U.S. Air Force STTR-Funded Research </strong> 
 
   <ul>
 
     <li>
       <strong>Research objective:</strong>
-      Contributed to research characterizing regional variability in earthquake
-      ground-motion spatial correlation and assessing the limitations of applying
-      a single stationary correlation model across California.
+      Support the development of rapidly deployable, low-logistics hardened shelters
+      for resilient basing in which sand serves as a primary wall material.
+    </li>
+
+    <li>
+      <strong>Methods:</strong>
+      Characterized sand behavior through monotonic direct shear testing to determine
+      shear strength and friction angle and cyclic direct shear testing to investigate
+      dynamic response under repeated loading.
+    </li>
+
+    <li>
+      <strong>Ongoing research:</strong>
+      Contributing to the characterization of sand under high-frequency cyclic loading
+      and the development of a customized dynamic-property model suitable for the loading
+      conditions associated with the proposed shelter system.
+    </li>
+
+    <li>
+      <strong>Key contribution:</strong>
+      Provided experimentally derived geotechnical parameters needed to characterize
+      the static and dynamic behavior of the sand material used in the structural system.
+    </li>
+
+
+  <h3>
+    Nonstationary Spatial Correlation Modeling of Earthquake Ground Motions
+  </h3>
+  <p class="research-position">
+    <strong>Collaborative Research </strong> | Old Dominion University
+  </p>    
+
+  <ul>
+
+    <li>
+      <strong>Research objective:</strong>
+      Characterize regional variability in earthquake ground-motion spatial
+      correlation and investigate the limitations of representing California
+      using a single stationary correlation model.
     </li>
 
 
     <li>
       <strong>Methods:</strong>
-      Co-developed analyses using multi-event paired ground-motion observations,
-      Pearson correlation, Fisher transformation, spatial subdivision, and
-      statistical/Bayesian regression to quantify spatially varying correlation
-      structures.
+      Applied multi-event paired ground-motion observations, Pearson correlation,
+      Fisher transformation, spatial subdivision, and statistical/Bayesian regression
+      to estimate spatially varying correlation structures.
     </li>
 
 
     <li>
-      <strong>Key result/contribution:</strong>
+      <strong>Key contribution:</strong>
       Helped develop and evaluate a nonstationary spatial-correlation framework
       that captures regional differences in ground-motion dependence and provides
       a more locally representative alternative to statewide stationary models.
     </li>
 
   </ul>
+
+  <h3>
+    Ambient-Noise Field Investigation for Subsurface Characterization and Land-Subsidence Studies
+  </h3>
+  <p class="research-position">
+    <strong>Old Dominion University Summer Seed Grant </strong> | 2023
+  </p>    
+
+  <ul>
+
+    <li>
+      <strong>Research objective:</strong>
+      Conduct a preliminary investigation of three-component ambient-noise
+      measurements collected at the ground surface as a noninvasive approach
+      for subsurface characterization in the Hampton Roads region.
+    </li>
+
+    <li>
+      <strong>Methods:</strong>
+      Participated in field data collection and analysis of horizontal-to-vertical
+      spectral ratios (HVSR) derived from ambient-noise measurements to investigate
+      relationships between surface measurements and subsurface stratigraphy.
+    </li>
+
+    <li>
+      <strong>Key contribution:</strong>
+      Evaluated the potential of ambient-noise measurements to supplement limited
+      boring information and support interpolation of subsurface stratigraphy, with
+      the broader objective of improving regional land-subsidence characterization.
+    </li>
+
 
 </div>
 
