@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Experience | Busra Bocekli</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 260px;
+  background: #1c1c1c;
+  color: white;
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+/* Name */
+
+.name {
+  padding: 0 30px 20px;
+
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+
+/* Icons */
+
+.footer-icons {
+  display: flex;
+  gap: 8px;
+
+  margin-bottom: 16px;
+  padding-left: 30px;
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+
+/* Menu */
+
+.menu a {
+  display: block;
+
+  padding: 14px 30px;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-left: 4px solid transparent;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: #555;
+  border-left: 4px solid white;
+}
+
+
+/* Footer */
+
+.footer-text {
+  padding: 20px 30px;
+}
+
+.line {
+  width: 140px;
+  height: 1px;
+
+  background: rgba(255,255,255,0.7);
+
+  margin-bottom: 6px;
+}
+
+.footer-text p {
+  margin: 0;
+
+  font-size: 11px;
+
+  color: rgba(255,255,255,0.75);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main {
+  margin-left: 260px;
+
+  width: calc(100% - 260px);
+
+  min-height: 100vh;
+
+  background: #f5f5f5;
+
+  padding: 55px 70px 80px;
+}
+
+
+/* Content width */
+
+.content {
+  max-width: 950px;
+}
+
+
+/* Page title */
+
+.content h1 {
+  font-size: 34px;
+  font-weight: 600;
+
+  color: #1c1c1c;
+
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 2px solid #1c1c1c;
+}
+
+
+/* =========================
+   EXPERIENCE CARDS
+========================= */
+
+.experience-section {
+  background: white;
+
+  padding: 25px 30px;
+
+  margin-bottom: 25px;
+
+  border-left: 4px solid #1c1c1c;
+
+  box-shadow:
+    0 2px 10px rgba(0,0,0,0.06);
+}
+
+
+/* Company, position and date row */
+
+.experience-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 25px;
+
+  margin-bottom: 12px;
+}
+
+
+/* Company and role */
+
+.experience-title {
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  color: #222;
+}
+
+.experience-title strong {
+  font-weight: 600;
+}
+
+
+/* Dates */
+
+.experience-date {
+  font-size: 14px;
+
+  color: #555;
+
+  white-space: nowrap;
+
+  text-align: right;
+
+  padding-top: 2px;
+}
+
+
+/* Lists */
+
+.experience-section ul {
+  padding-left: 22px;
+
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.experience-section li {
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  margin-bottom: 7px;
+
+  color: #333;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    padding-top: 30px;
+  }
+
+  .main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 35px 25px 60px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .experience-header {
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+  .experience-date {
+    text-align: left;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="layout">
+
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+<div class="sidebar">
+
+  <div>
+
+    <div class="name">
+      Busra<br>
+      Bocekli,<br>
+      PhD Candidate
+    </div>
+
+
+    <div class="footer-icons">
+
+      <a href="#" target="_blank">
+        <img
+          src="linkedin.png"
+          class="icon-img"
+          alt="LinkedIn">
+      </a>
+
+      <a href="#" target="_blank">
+        <img
+          src="ORCID_iD.png"
+          class="icon-img"
+          alt="ORCID">
+      </a>
+
+      <a href="#" target="_blank">
+        <img
+          src="Google_scholar.png"
+          class="icon-img"
+          alt="Google Scholar">
+      </a>
+
+      <a href="#" target="_blank">
+        <img
+          src="GitHub-Logo.jpg"
+          class="icon-img"
+          alt="GitHub">
+      </a>
+
+    </div>
+
+
+    <div class="menu">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About Me
+      </a>
+
+      <a href="research.html">
+        Research
+      </a>
+
+      <a href="teaching.html">
+        Teaching
+      </a>
+
+      <a
+        class="active"
+        href="experience.html">
+        Experience
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-text">
+
+    <div class="line"></div>
+
+    <p>
+      © 2026 Busra Bocekli.
+      All rights reserved.
+    </p>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<div class="main">
+
+<div class="content">
+
+
+<h1>Professional Experience</h1>
+
+
+
+<!-- =========================
+     SKANSKA
+========================= -->
+
+<div class="experience-section">
+
+  <div class="experience-header">
+
+    <div class="experience-title">
+
+      Skanska, Virginia Beach, VA,
+      <strong>Design Engineer Intern</strong>
+
+    </div>
+
+    <div class="experience-date">
+      May – August 2026
+    </div>
+
+  </div>
+
+
+  <ul>
+
+    <li>
+      Performed temporary works and geotechnical design
+      calculations for heavy civil projects.
+    </li>
+
+    <li>
+      Evaluated SOE systems, slope stability,
+      crane loads, and pile embedment.
+    </li>
+
+    <li>
+      Reviewed drawings and supported
+      constructability assessments.
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+<!-- =========================
+     OLD DOMINION UNIVERSITY
+========================= -->
+
+<div class="experience-section">
+
+  <div class="experience-header">
+
+    <div class="experience-title">
+
+      Old Dominion University, Virginia,
+      <strong>Research Assistant</strong>
+
+    </div>
+
+    <div class="experience-date">
+      January 2023 – Present
+    </div>
+
+  </div>
+
+
+  <ul>
+
+    <li>
+      Investigating the consistency between DYFI data
+      and ground-motion data by applying path-attenuation analysis.
+    </li>
+
+    <li>
+      Implementing Bayesian methods to assess the
+      spatial correlation of earthquake ground motion.
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+<!-- =========================
+     LIMAK CONSTRUCTION
+========================= -->
+
+<div class="experience-section">
+
+  <div class="experience-header">
+
+    <div class="experience-title">
+
+      Limak Construction, Central Bank of the Republic of Turkey,
+      Türkiye,
+      <strong>Planning Engineer</strong>
+
+    </div>
+
+    <div class="experience-date">
+      February – August 2022
+    </div>
+
+  </div>
+
+
+  <ul>
+
+    <li>
+      Managed scheduling and reporting using Primavera P6.
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+<!-- =========================
+     SEMBOL CONSTRUCTION
+========================= -->
+
+<div class="experience-section">
+
+  <div class="experience-header">
+
+    <div class="experience-title">
+
+      Sembol Construction, Tersane Istanbul Project, Türkiye,
+      <strong>Junior Engineer</strong>
+
+    </div>
+
+    <div class="experience-date">
+      July 2019 – February 2022
+    </div>
+
+  </div>
+
+
+  <ul>
+
+    <li>
+      Led efficiency analysis, budget updates,
+      and the tendering process.
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+<!-- =========================
+     IGA
+========================= -->
+
+<div class="experience-section">
+
+  <div class="experience-header">
+
+    <div class="experience-title">
+
+      IGA, Istanbul Grand Airport, Türkiye,
+      <strong>Civil Engineer Intern</strong>
+
+    </div>
+
+    <div class="experience-date">
+      July – September 2017
+    </div>
+
+  </div>
+
+
+  <ul>
+
+    <li>
+      Developed budget estimates through accurate
+      quantity takeoffs.
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+<!-- =========================
+     AKIN AKINCI ENGINEERING
+========================= -->
+
+<div class="experience-section">
+
+  <div class="experience-header">
+
+    <div class="experience-title">
+
+      Akin Akinci Engineering, Türkiye,
+      <strong>Structural Engineer Intern</strong>
+
+    </div>
+
+    <div class="experience-date">
+      February – March 2017
+    </div>
+
+  </div>
+
+
+  <ul>
+
+    <li>
+      Assisted in technical drawings and
+      structural design integration.
+    </li>
+
+  </ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
