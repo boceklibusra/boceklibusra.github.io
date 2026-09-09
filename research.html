@@ -89,14 +89,10 @@ body {
 
 .menu a {
   display: block;
-
   padding: 14px 30px;
-
   color: white;
   text-decoration: none;
-
   border-left: 4px solid transparent;
-
   font-size: 14px;
   font-weight: 400;
 }
@@ -135,11 +131,8 @@ body {
 .main {
   margin-left: 260px;
   width: calc(100% - 260px);
-
   min-height: 100vh;
-
   background: #f5f5f5;
-
   padding: 55px 70px 80px;
 }
 
@@ -156,14 +149,10 @@ body {
 .content h1 {
   font-size: 34px;
   font-weight: 600;
-
   color: #1c1c1c;
-
   margin-top: 0;
   margin-bottom: 35px;
-
   padding-bottom: 12px;
-
   border-bottom: 2px solid #1c1c1c;
 }
 
@@ -173,9 +162,7 @@ body {
 .content h2 {
   font-size: 20px;
   font-weight: 600;
-
   color: #1c1c1c;
-
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -186,9 +173,7 @@ body {
 .content h3 {
   font-size: 17px;
   font-weight: 600;
-
   color: #333;
-
   margin-top: 25px;
   margin-bottom: 10px;
 }
@@ -199,9 +184,7 @@ body {
 .content p {
   font-size: 14px;
   line-height: 1.8;
-
   color: #333;
-
   margin-top: 8px;
   margin-bottom: 15px;
 }
@@ -212,18 +195,14 @@ body {
 .content ul,
 .content ol {
   padding-left: 22px;
-
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .content li {
   font-size: 14px;
-
   line-height: 1.8;
-
   margin-bottom: 12px;
-
   color: #333;
 }
 
@@ -247,16 +226,11 @@ body {
 
 .research-section {
   background: white;
-
   padding: 25px 30px;
-
   margin-bottom: 30px;
-
   border-left: 4px solid #1c1c1c;
-
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
-
 
 .research-section h2:first-child {
   margin-top: 0;
@@ -280,39 +254,52 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #333;
-
   margin-top: 0;
   margin-bottom: 15px;
 }
 
 
-/* 2 columns x 2 rows */
+/* Two columns and two rows */
 
 .research-gallery-grid {
   display: grid;
-
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
   gap: 14px;
-
   width: 100%;
   max-width: 100%;
 }
 
 
-/* Keep full image visible */
+/* Equal-size photo boxes */
 
-.research-gallery-grid img {
+.research-gallery-item {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
 
-  display: block;
+  background: #f8f8f8;
 
-  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 
   border-radius: 4px;
 
-  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+  box-shadow:
+    0 1px 5px rgba(0,0,0,0.08);
+}
+
+
+/* Full photo visible — no cropping */
+
+.research-gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
 }
 
 
@@ -328,23 +315,27 @@ body {
 
   .sidebar {
     position: relative;
-
     width: 100%;
     height: auto;
-
     padding-top: 30px;
   }
 
   .main {
     margin-left: 0;
-
     width: 100%;
-
     padding: 35px 25px 60px;
   }
 
   .content h1 {
     font-size: 28px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .research-gallery-grid {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -490,17 +481,25 @@ body {
 
   <div class="research-gallery-grid">
 
-    <img src="R1.png"
-         alt="DYFI research photo 1">
+    <div class="research-gallery-item">
+      <img src="R1.png"
+           alt="13NCEE conference photo 1">
+    </div>
 
-    <img src="R2.png"
-         alt="DYFI research photo 2">
+    <div class="research-gallery-item">
+      <img src="R2.png"
+           alt="13NCEE conference photo 2">
+    </div>
 
-    <img src="R3.png"
-         alt="DYFI research photo 3">
+    <div class="research-gallery-item">
+      <img src="R3.png"
+           alt="13NCEE conference photo 3">
+    </div>
 
-    <img src="R4.png"
-         alt="DYFI research photo 4">
+    <div class="research-gallery-item">
+      <img src="R4.png"
+           alt="13NCEE conference photo 4">
+    </div>
 
   </div>
 
@@ -519,17 +518,25 @@ body {
 
   <div class="research-gallery-grid">
 
-    <img src="G1.png"
-         alt="Spatial correlation research photo 1">
+    <div class="research-gallery-item">
+      <img src="G1.png"
+           alt="Geotechnical Frontiers conference photo 1">
+    </div>
 
-    <img src="G2.png"
-         alt="Spatial correlation research photo 2">
+    <div class="research-gallery-item">
+      <img src="G2.png"
+           alt="Geotechnical Frontiers conference photo 2">
+    </div>
 
-    <img src="G3.png"
-         alt="Spatial correlation research photo 3">
+    <div class="research-gallery-item">
+      <img src="G3.png"
+           alt="Geotechnical Frontiers conference photo 3">
+    </div>
 
-    <img src="G4.png"
-         alt="Spatial correlation research photo 4">
+    <div class="research-gallery-item">
+      <img src="G4.png"
+           alt="Geotechnical Frontiers conference photo 4">
+    </div>
 
   </div>
 
