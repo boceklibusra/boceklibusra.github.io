@@ -258,8 +258,6 @@ body {
 }
 
 
-/* Prevent extra space at top */
-
 .research-section h2:first-child {
   margin-top: 0;
 }
@@ -271,6 +269,50 @@ body {
   color: #666;
   margin-top: 0;
   margin-bottom: 18px;
+}
+
+
+/* =========================
+   RESEARCH PHOTO GALLERIES
+========================= */
+
+.research-gallery-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+/* 2 columns x 2 rows */
+
+.research-gallery-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* Keep full image visible */
+
+.research-gallery-grid img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 4px;
+
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
 }
 
 
@@ -371,8 +413,7 @@ body {
         About Me
       </a>
 
-      <a class="active"
-         href="research.html">
+      <a class="active" href="research.html">
         Research
       </a>
 
@@ -438,6 +479,64 @@ body {
 
 
 <!-- =========================
+     PHOTO GROUP 1
+========================= -->
+
+<div class="research-section">
+
+  <p class="research-gallery-title">
+    13th National Conference on Earthquake Engineering (13NCEE), Portland, OR.
+  </p>
+
+  <div class="research-gallery-grid">
+
+    <img src="R1.png"
+         alt="DYFI research photo 1">
+
+    <img src="R2.png"
+         alt="DYFI research photo 2">
+
+    <img src="R3.png"
+         alt="DYFI research photo 3">
+
+    <img src="R4.png"
+         alt="DYFI research photo 4">
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     PHOTO GROUP 2
+========================= -->
+
+<div class="research-section">
+
+  <p class="research-gallery-title">
+    Geotechnical Frontiers 2025, Louisville, KY.
+  </p>
+
+  <div class="research-gallery-grid">
+
+    <img src="S1.png"
+         alt="Spatial correlation research photo 1">
+
+    <img src="S2.png"
+         alt="Spatial correlation research photo 2">
+
+    <img src="S3.png"
+         alt="Spatial correlation research photo 3">
+
+    <img src="S4.png"
+         alt="Spatial correlation research photo 4">
+
+  </div>
+
+</div>
+
+
+<!-- =========================
      JOURNAL PUBLICATIONS
 ========================= -->
 
@@ -452,6 +551,7 @@ body {
       &amp; Stewart, J. P. (2026).
       “Nonstationary Spatial Correlation of Earthquake Ground Motions in California.”
       <em>Earthquake Spectra</em>, <em>42</em>(3), e70083.
+
       <a href="https://doi.org/10.1002/esp4.70083"
          target="_blank">
         https://doi.org/10.1002/esp4.70083
@@ -520,6 +620,7 @@ body {
       <strong>Bocekli, B.</strong>, Wang, P., et al. (2026).
       “Do ‘Did You Feel It?’ Intensity Data Provide Consistent Path Attenuation
       with Instrumental Recordings?”
+
       <em>
         Proceedings of the 13th National Conference on Earthquake Engineering
         (13NCEE)
