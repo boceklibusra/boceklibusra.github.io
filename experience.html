@@ -178,6 +178,23 @@ body {
 }
 
 
+/* Service heading */
+
+.section-heading {
+  font-size: 24px;
+  font-weight: 600;
+
+  color: #1c1c1c;
+
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 2px solid #1c1c1c;
+}
+
+
 /* =========================
    EXPERIENCE CARDS
 ========================= */
@@ -288,7 +305,7 @@ body {
 }
 
 
-/* Three equal photos on same row */
+/* Three equal Skanska photos */
 
 .experience-gallery-row {
   display: grid;
@@ -299,9 +316,6 @@ body {
 
   width: 100%;
 }
-
-
-/* Equal-size photo boxes */
 
 .experience-gallery-item {
   width: 100%;
@@ -322,10 +336,74 @@ body {
     0 1px 5px rgba(0,0,0,0.08);
 }
 
-
-/* Full photo visible */
-
 .experience-gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================
+   SERVICE PHOTO GALLERY
+========================= */
+
+.service-gallery {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.service-gallery-title {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #333;
+
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+
+/* Two photos on same row */
+
+.service-gallery-row {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  width: 100%;
+}
+
+
+/* Same-size photo boxes */
+
+.service-gallery-item {
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  background: #f8f8f8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 1px 5px rgba(0,0,0,0.08);
+}
+
+
+/* Keep full photos visible */
+
+.service-gallery-item img {
   width: 100%;
   height: 100%;
 
@@ -366,6 +444,10 @@ body {
     font-size: 28px;
   }
 
+  .section-heading {
+    font-size: 22px;
+  }
+
 }
 
 
@@ -383,6 +465,11 @@ body {
 
 
   .experience-gallery-row {
+    grid-template-columns: 1fr;
+  }
+
+
+  .service-gallery-row {
     grid-template-columns: 1fr;
   }
 
@@ -705,35 +792,59 @@ body {
 
 
 <!-- =========================
-     AKIN AKINCI ENGINEERING
+     SERVICE
 ========================= -->
 
+<h2 class="section-heading">
+  Service
+</h2>
+
+
 <div class="experience-section">
-
-  <div class="experience-header">
-
-    <div class="experience-title">
-
-      Akin Akinci Engineering, Türkiye,
-      <strong>Structural Engineer Intern</strong>
-
-    </div>
-
-    <div class="experience-date">
-      February – March 2017
-    </div>
-
-  </div>
-
 
   <ul>
 
     <li>
-      Assisted in technical drawings and
-      structural design integration.
+      <strong>Judge</strong>, Virginia State Science &amp; Engineering Fair,
+      Norfolk, Virginia, 2024.
     </li>
 
   </ul>
+
+
+  <!-- Service Photos -->
+
+  <div class="service-gallery">
+
+    <p class="service-gallery-title">
+      Virginia State Science &amp; Engineering Fair
+    </p>
+
+
+    <div class="service-gallery-row">
+
+
+      <div class="service-gallery-item">
+
+        <img
+          src="Service1.png"
+          alt="Virginia State Science and Engineering Fair judging photo 1">
+
+      </div>
+
+
+      <div class="service-gallery-item">
+
+        <img
+          src="Service2.png"
+          alt="Virginia State Science and Engineering Fair judging photo 2">
+
+      </div>
+
+
+    </div>
+
+  </div>
 
 </div>
 
