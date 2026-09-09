@@ -89,14 +89,10 @@ body {
 
 .menu a {
   display: block;
-
   padding: 14px 30px;
-
   color: white;
   text-decoration: none;
-
   border-left: 4px solid transparent;
-
   font-size: 14px;
   font-weight: 400;
 }
@@ -123,9 +119,7 @@ body {
 
 .footer-text p {
   margin: 0;
-
   font-size: 11px;
-
   color: rgba(255,255,255,0.75);
 }
 
@@ -156,10 +150,8 @@ body {
 /* Page title */
 
 .content h1 {
-
   font-size: 34px;
   font-weight: 600;
-
   color: #1c1c1c;
 
   margin-top: 0;
@@ -174,10 +166,8 @@ body {
 /* Main position headings */
 
 .content h2 {
-
   font-size: 20px;
   font-weight: 600;
-
   color: #1c1c1c;
 
   margin-top: 40px;
@@ -188,10 +178,8 @@ body {
 /* Course headings */
 
 .content h3 {
-
   font-size: 17px;
   font-weight: 600;
-
   color: #333;
 
   margin-top: 25px;
@@ -202,9 +190,7 @@ body {
 /* Institution / dates */
 
 .institution {
-
   font-size: 14px;
-
   color: #666;
 
   margin-top: 0;
@@ -215,7 +201,6 @@ body {
 /* Lists */
 
 .content ul {
-
   padding-left: 22px;
 
   margin-top: 10px;
@@ -223,9 +208,7 @@ body {
 }
 
 .content li {
-
   font-size: 14px;
-
   line-height: 1.8;
 
   margin-bottom: 9px;
@@ -237,7 +220,6 @@ body {
 /* Teaching section card */
 
 .teaching-section {
-
   background: white;
 
   padding: 25px 30px;
@@ -252,65 +234,64 @@ body {
 
 
 /* =========================
-   RESPONSIVE
+   TESTIMONIAL VIDEOS
 ========================= */
 
-@media (max-width: 900px) {
+.testimonials {
+  width: 100%;
 
-  .layout {
-    flex-direction: column;
-  }
-
-  .sidebar {
-
-    position: relative;
-
-    width: 100%;
-    height: auto;
-
-    padding-top: 30px;
-  }
-
-  .main {
-
-    margin-left: 0;
-
-    width: 100%;
-
-    padding: 35px 25px 60px;
-  }
-
-  .content h1 {
-    font-size: 28px;
-  }
-
+  margin-top: 22px;
+  margin-bottom: 28px;
 }
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media (max-width: 900px) {
+.testimonial-title {
+  font-size: 14px;
+  font-weight: 600;
 
-  .layout {
-    flex-direction: column;
-  }
+  color: #333;
 
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding-top: 30px;
-  }
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
-  .main {
-    margin-left: 0;
-    width: 100%;
-    padding: 35px 25px 60px;
-  }
 
-  .content h1 {
-    font-size: 28px;
-  }
+/* Two equal videos on one row */
+
+.testimonial-row {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  width: 100%;
+}
+
+
+/* Equal size video boxes */
+
+.testimonial-video {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #000;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 1px 5px rgba(0,0,0,0.08);
+}
+
+.testimonial-video video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
 }
 
 
@@ -328,13 +309,17 @@ body {
   font-size: 14px;
   font-weight: 600;
   color: #333;
+
   margin: 0 0 10px 0;
 }
 
 .gallery-row {
   display: grid;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 14px;
+
   width: 100%;
   max-width: 100%;
 }
@@ -344,42 +329,95 @@ body {
   height: auto;
 
   display: block;
+
   object-fit: contain;
 
   border-radius: 4px;
 
-  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+  box-shadow:
+    0 1px 5px rgba(0,0,0,0.08);
 }
+
 
 /* Gallery navigation */
 
 .gallery-navigation {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   width: 100%;
+
   margin-bottom: 10px;
 }
 
 .gallery-btn {
   border: none;
+
   background: transparent;
 
   color: #333;
 
   font-family: 'Poppins', sans-serif;
+
   font-size: 13px;
   font-weight: 500;
 
   cursor: pointer;
+
   padding: 5px 0;
 }
 
 .gallery-btn:hover {
   color: #777;
 }
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    padding-top: 30px;
+  }
+
+  .main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 35px 25px 60px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .testimonial-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 </style>
- 
+
 </head>
 
 
@@ -492,7 +530,9 @@ body {
 
 
 
-<!-- LAB INSTRUCTOR -->
+<!-- =========================
+     LAB INSTRUCTOR
+========================= -->
 
 <div class="teaching-section">
 
@@ -501,10 +541,66 @@ Graduate Teaching Assistant /
 Laboratory Instructor
 </h2>
 
+
 <p class="institution">
 <strong>Old Dominion University</strong>
 | 2023–Present
 </p>
+
+
+
+<!-- =========================
+     TESTIMONIAL VIDEOS
+========================= -->
+
+<div class="testimonials">
+
+  <p class="testimonial-title">
+    Student Testimonials
+  </p>
+
+
+  <div class="testimonial-row">
+
+
+    <!-- Testimonial Video 1 -->
+
+    <div class="testimonial-video">
+
+      <video controls preload="metadata">
+
+        <source
+          src="testimonial1.mp4"
+          type="video/mp4">
+
+        Your browser does not support the video tag.
+
+      </video>
+
+    </div>
+
+
+    <!-- Testimonial Video 2 -->
+
+    <div class="testimonial-video">
+
+      <video controls preload="metadata">
+
+        <source
+          src="testimonial2.mp4"
+          type="video/mp4">
+
+        Your browser does not support the video tag.
+
+      </video>
+
+    </div>
+
+
+  </div>
+
+</div>
+
 
 
 <h3>
@@ -560,46 +656,69 @@ and review.
 </li>
 
 </ul>
-  <div class="lab-gallery">
 
-  <p class="gallery-caption" id="galleryCaption">
+
+
+<!-- =========================
+     LAB PHOTO GALLERY
+========================= -->
+
+<div class="lab-gallery">
+
+  <p class="gallery-caption"
+     id="galleryCaption">
     Selected photographs from Compaction Test
   </p>
 
+
   <div class="gallery-carousel">
+
+
     <div class="gallery-navigation">
+
       <button
         class="gallery-btn"
         id="galleryPrev"
         type="button">
+
         &#10094; Previous
+
       </button>
+
 
       <button
         class="gallery-btn"
         id="galleryNext"
         type="button">
+
         Next &#10095;
+
       </button>
 
     </div>
+
+
     <div class="gallery-row">
 
-    <img id="galleryImg1"
-         src="C1.png"
-         alt="Soil Mechanics Laboratory">
+      <img
+        id="galleryImg1"
+        src="C1.png"
+        alt="Soil Mechanics Laboratory">
 
-    <img id="galleryImg2"
-         src="C2.png"
-         alt="Soil Mechanics Laboratory">
+      <img
+        id="galleryImg2"
+        src="C2.png"
+        alt="Soil Mechanics Laboratory">
 
-    <img id="galleryImg3"
-         src="C3.png"
-         alt="Soil Mechanics Laboratory">
+      <img
+        id="galleryImg3"
+        src="C3.png"
+        alt="Soil Mechanics Laboratory">
 
-    <img id="galleryImg4"
-         src="C4.png"
-         alt="Soil Mechanics Laboratory">
+      <img
+        id="galleryImg4"
+        src="C4.png"
+        alt="Soil Mechanics Laboratory">
 
     </div>
 
@@ -608,11 +727,14 @@ and review.
 
 </div>
 
+
 </div>
 
 
 
-<!-- HOMEWORK GRADER -->
+<!-- =========================
+     HOMEWORK GRADER
+========================= -->
 
 <div class="teaching-section">
 
@@ -688,15 +810,18 @@ to foundation-related problems.
 
 </div>
 
-
-</div>
 </div>
 
-</div>
+
+
+<!-- =========================
+     GALLERY JAVASCRIPT
+========================= -->
 
 <script>
 
 const galleryGroups = [
+
   {
     caption: "Selected photographs from Compaction Test",
     images: [
@@ -707,6 +832,7 @@ const galleryGroups = [
     ]
   },
 
+
   {
     caption: "Selected photographs from Specific Gravity Test",
     images: [
@@ -716,7 +842,8 @@ const galleryGroups = [
       "S4.png"
     ]
   },
-  
+
+
   {
     caption: "Selected photographs from Unconfined Compression Test",
     images: [
@@ -726,6 +853,7 @@ const galleryGroups = [
       "U5.png"
     ]
   },
+
 
   {
     caption: "Selected photographs from Atterberg Limits Test",
@@ -737,6 +865,7 @@ const galleryGroups = [
     ]
   },
 
+
   {
     caption: "Selected photographs from Water Content Determination Test",
     images: [
@@ -747,48 +876,67 @@ const galleryGroups = [
     ]
   }
 
-  
 ];
+
 
 let currentGroup = 0;
 
+
 const imageElements = [
+
   document.getElementById("galleryImg1"),
   document.getElementById("galleryImg2"),
   document.getElementById("galleryImg3"),
   document.getElementById("galleryImg4")
+
 ];
+
 
 const captionElement =
   document.getElementById("galleryCaption");
 
-function updateGallery() {
-  const group = galleryGroups[currentGroup];
 
-  captionElement.textContent = group.caption;
+function updateGallery() {
+
+  const group =
+    galleryGroups[currentGroup];
+
+  captionElement.textContent =
+    group.caption;
+
 
   for (let i = 0; i < 4; i++) {
-    imageElements[i].src = group.images[i];
+
+    imageElements[i].src =
+      group.images[i];
+
   }
+
 }
+
+
 
 document
   .getElementById("galleryNext")
   .addEventListener("click", function() {
 
     currentGroup =
-      (currentGroup + 1) % galleryGroups.length;
+      (currentGroup + 1)
+      % galleryGroups.length;
 
     updateGallery();
 
   });
+
+
 
 document
   .getElementById("galleryPrev")
   .addEventListener("click", function() {
 
     currentGroup =
-      (currentGroup - 1 + galleryGroups.length)
+      (currentGroup - 1
+      + galleryGroups.length)
       % galleryGroups.length;
 
     updateGallery();
@@ -797,9 +945,7 @@ document
 
 </script>
 
-</body>
 
-</html>
 </body>
 
 </html>
