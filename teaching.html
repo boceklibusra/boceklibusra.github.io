@@ -131,11 +131,8 @@ body {
 .main {
   margin-left: 260px;
   width: calc(100% - 260px);
-
   min-height: 100vh;
-
   background: #f5f5f5;
-
   padding: 55px 70px 80px;
 }
 
@@ -172,6 +169,13 @@ body {
 
   margin-top: 40px;
   margin-bottom: 6px;
+}
+
+
+/* Remove extra top space when h2 starts a card */
+
+.teaching-section > h2:first-child {
+  margin-top: 0;
 }
 
 
@@ -217,7 +221,9 @@ body {
 }
 
 
-/* Teaching section card */
+/* =========================
+   TEACHING SECTION CARD
+========================= */
 
 .teaching-section {
   background: white;
@@ -239,23 +245,20 @@ body {
 
 .testimonials {
   width: 100%;
-
-  margin-top: 22px;
-  margin-bottom: 28px;
 }
 
 .testimonial-title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 
   color: #333;
 
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 
-/* Two equal videos on one row */
+/* Two equal videos on same row */
 
 .testimonial-row {
   display: grid;
@@ -268,7 +271,7 @@ body {
 }
 
 
-/* Equal size video boxes */
+/* Equal video boxes */
 
 .testimonial-video {
   width: 100%;
@@ -531,6 +534,64 @@ body {
 
 
 <!-- =========================
+     STUDENT TESTIMONIALS
+========================= -->
+
+<div class="teaching-section">
+
+  <div class="testimonials">
+
+    <p class="testimonial-title">
+      Student Testimonials
+    </p>
+
+
+    <div class="testimonial-row">
+
+
+      <!-- Testimonial Video 1 -->
+
+      <div class="testimonial-video">
+
+        <video controls preload="metadata">
+
+          <source
+            src="testimonial1.mp4"
+            type="video/mp4">
+
+          Your browser does not support the video tag.
+
+        </video>
+
+      </div>
+
+
+      <!-- Testimonial Video 2 -->
+
+      <div class="testimonial-video">
+
+        <video controls preload="metadata">
+
+          <source
+            src="testimonial2.mp4"
+            type="video/mp4">
+
+          Your browser does not support the video tag.
+
+        </video>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
      LAB INSTRUCTOR
 ========================= -->
 
@@ -546,60 +607,6 @@ Laboratory Instructor
 <strong>Old Dominion University</strong>
 | 2023–Present
 </p>
-
-
-
-<!-- =========================
-     TESTIMONIAL VIDEOS
-========================= -->
-
-<div class="testimonials">
-
-  <p class="testimonial-title">
-    Student Testimonials
-  </p>
-
-
-  <div class="testimonial-row">
-
-
-    <!-- Testimonial Video 1 -->
-
-    <div class="testimonial-video">
-
-      <video controls preload="metadata">
-
-        <source
-          src="testimonial1.mp4"
-          type="video/mp4">
-
-        Your browser does not support the video tag.
-
-      </video>
-
-    </div>
-
-
-    <!-- Testimonial Video 2 -->
-
-    <div class="testimonial-video">
-
-      <video controls preload="metadata">
-
-        <source
-          src="testimonial2.mp4"
-          type="video/mp4">
-
-        Your browser does not support the video tag.
-
-      </video>
-
-    </div>
-
-
-  </div>
-
-</div>
 
 
 
@@ -667,7 +674,9 @@ and review.
 
   <p class="gallery-caption"
      id="galleryCaption">
+
     Selected photographs from Compaction Test
+
   </p>
 
 
@@ -824,6 +833,7 @@ const galleryGroups = [
 
   {
     caption: "Selected photographs from Compaction Test",
+
     images: [
       "C1.png",
       "C2.png",
@@ -835,6 +845,7 @@ const galleryGroups = [
 
   {
     caption: "Selected photographs from Specific Gravity Test",
+
     images: [
       "S1.png",
       "S2.png",
@@ -846,6 +857,7 @@ const galleryGroups = [
 
   {
     caption: "Selected photographs from Unconfined Compression Test",
+
     images: [
       "U1.png",
       "U2.png",
@@ -857,6 +869,7 @@ const galleryGroups = [
 
   {
     caption: "Selected photographs from Atterberg Limits Test",
+
     images: [
       "LL1.png",
       "LL2.png",
@@ -868,6 +881,7 @@ const galleryGroups = [
 
   {
     caption: "Selected photographs from Water Content Determination Test",
+
     images: [
       "W1.png",
       "W3.png",
@@ -900,6 +914,7 @@ function updateGallery() {
 
   const group =
     galleryGroups[currentGroup];
+
 
   captionElement.textContent =
     group.caption;
