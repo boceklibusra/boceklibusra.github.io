@@ -676,6 +676,76 @@ body {
   
   <ul>
 
+
+    <div class="lab-gallery">
+
+  <p class="gallery-caption"
+     id="galleryCaption">
+
+    Selected photographs from Direct Shear Test
+
+  </p>
+
+
+  <div class="gallery-carousel">
+
+
+    <div class="gallery-navigation">
+
+      <button
+        class="gallery-btn"
+        id="galleryPrev"
+        type="button">
+
+        &#10094; Previous
+
+      </button>
+
+
+      <button
+        class="gallery-btn"
+        id="galleryNext"
+        type="button">
+
+        Next &#10095;
+
+      </button>
+
+    </div>
+
+
+    <div class="gallery-row">
+
+      <img
+        id="galleryImg1"
+        src="DS1.png"
+        alt="Soil Mechanics Laboratory">
+
+      <img
+        id="galleryImg2"
+        src="DS2.png"
+        alt="Soil Mechanics Laboratory">
+
+      <img
+        id="galleryImg3"
+        src="DS3.png"
+        alt="Soil Mechanics Laboratory">
+
+      <img
+        id="galleryImg4"
+        src="DS4.png"
+        alt="Soil Mechanics Laboratory">
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+</div>
+
     <li>
       <strong>Research objective:</strong>
       Support the development of rapidly deployable, low-logistics hardened shelters
@@ -952,6 +1022,103 @@ body {
 </div>
 
 </div>
+
+<script>
+
+const galleryGroups = [
+
+  {
+    caption: "Selected photographs from Direct Shear Test",
+
+    images: [
+      "DS1.png",
+      "DS2.png",
+      "DS3.png",
+      "DS4.png"
+    ]
+  },
+
+
+  {
+    caption: "Selected photographs from Cyclic Direct Shear Test",
+
+    images: [
+      "CD1.png",
+      "CD2.png",
+      "CD3.png",
+      "CD4.png"
+    ]
+  }
+
+
+  
+];
+
+
+let currentGroup = 0;
+
+
+const imageElements = [
+
+  document.getElementById("galleryImg1"),
+  document.getElementById("galleryImg2"),
+  document.getElementById("galleryImg3"),
+  document.getElementById("galleryImg4")
+
+];
+
+
+const captionElement =
+  document.getElementById("galleryCaption");
+
+
+function updateGallery() {
+
+  const group =
+    galleryGroups[currentGroup];
+
+
+  captionElement.textContent =
+    group.caption;
+
+
+  for (let i = 0; i < 4; i++) {
+
+    imageElements[i].src =
+      group.images[i];
+
+  }
+
+}
+
+
+document
+  .getElementById("galleryNext")
+  .addEventListener("click", function() {
+
+    currentGroup =
+      (currentGroup + 1)
+      % galleryGroups.length;
+
+    updateGallery();
+
+  });
+
+
+document
+  .getElementById("galleryPrev")
+  .addEventListener("click", function() {
+
+    currentGroup =
+      (currentGroup - 1
+      + galleryGroups.length)
+      % galleryGroups.length;
+
+    updateGallery();
+
+  });
+
+</script>
 
 </body>
 
