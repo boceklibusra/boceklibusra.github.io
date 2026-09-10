@@ -304,6 +304,95 @@ body {
 
 
 /* =========================
+   DIRECT / CYCLIC SHEAR
+   PHOTO CAROUSEL
+========================= */
+
+.lab-gallery {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 28px;
+}
+
+
+/* Gallery title */
+
+.gallery-caption {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+
+/* Previous / Next */
+
+.gallery-navigation {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+
+/* Navigation buttons */
+
+.gallery-btn {
+  background: transparent;
+  border: none;
+
+  padding: 0;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #333;
+
+  cursor: pointer;
+}
+
+.gallery-btn:hover {
+  color: #777;
+}
+
+
+/* 4 photos: 2 columns × 2 rows */
+
+.gallery-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* Equal fixed-size photographs */
+
+.gallery-row img {
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 1px 5px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -332,10 +421,19 @@ body {
 
 }
 
+
 @media (max-width: 600px) {
 
   .research-gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-row img {
+    height: 220px;
   }
 
 }
@@ -367,18 +465,33 @@ body {
 
     <div class="footer-icons">
 
-      <a href="https://www.linkedin.com/in/busra-bocekli-14657187" target="_blank">
-          <img src="linkedin.png" class="icon-img">
-        </a>
-        <a href="https://orcid.org/0009-0000-7788-9897" target="_blank">
-          <img src="ORCID_iD.png" class="icon-img">
-        </a>
-        <a href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en" target="_blank">
-          <img src="Google_scholar.png" class="icon-img">
-        </a>
-        <a href="https://github.com/boceklibusra" target="_blank">
-          <img src="GitHub-Logo.jpg" class="icon-img">
-        </a>
+      <a href="https://www.linkedin.com/in/busra-bocekli-14657187"
+         target="_blank">
+        <img src="linkedin.png"
+             class="icon-img"
+             alt="LinkedIn">
+      </a>
+
+      <a href="https://orcid.org/0009-0000-7788-9897"
+         target="_blank">
+        <img src="ORCID_iD.png"
+             class="icon-img"
+             alt="ORCID">
+      </a>
+
+      <a href="https://scholar.google.com/citations?user=THynCycAAAAJ&hl=en"
+         target="_blank">
+        <img src="Google_scholar.png"
+             class="icon-img"
+             alt="Google Scholar">
+      </a>
+
+      <a href="https://github.com/boceklibusra"
+         target="_blank">
+        <img src="GitHub-Logo.jpg"
+             class="icon-img"
+             alt="GitHub">
+      </a>
 
     </div>
 
@@ -393,7 +506,8 @@ body {
         About Me
       </a>
 
-      <a class="active" href="research.html">
+      <a class="active"
+         href="research.html">
         Research
       </a>
 
@@ -451,8 +565,10 @@ body {
   <p>
     Earthquake Engineering; Engineering Seismology; Ground-Motion Modeling;
     Seismic Hazard and Risk; Geotechnical Earthquake Engineering;
-    Soil Dynamics and Cyclic Soil Behavior; Spatial Correlation and Non-Ergodic Ground Motions Modeling; 
-    Human-Reported Earthquake Intensity; Geospatial Analysis; Data-Driven and Statistical Methods in Earthquake Engineering.
+    Soil Dynamics and Cyclic Soil Behavior; Spatial Correlation and Non-Ergodic
+    Ground Motions Modeling; Human-Reported Earthquake Intensity;
+    Geospatial Analysis; Data-Driven and Statistical Methods in
+    Earthquake Engineering.
   </p>
 
 </div>
@@ -594,13 +710,13 @@ body {
       Co-developed a nonstationary, subregion-dependent spatial correlation
       framework for earthquake ground motions using multi-event Pearson
       correlations, Fisher transformation, spatial gridding, and Bayesian
-      regression;      evaluated regional variability across 322 California
+      regression; evaluated regional variability across 322 California
       subregions.
     </li>
 
 
     <li>
-      Conducted geotechnical field investigations using three-component 
+      Conducted geotechnical field investigations using three-component
       ambient-noise measurements to evaluate horizontal-to-vertical spectral ratio
       (HVSR) methods for subsurface characterization and interpolation of stratigraphy
       from limited boring information.
@@ -610,9 +726,8 @@ body {
     <li>
       Contributed to laboratory characterization of sand for a U.S. Air Force
       STTR-funded resilient-basing project, including monotonic and cyclic direct
-      shear testing to determine frictional and dynamic soil properties under repeated
-      and high-frequency loading.
-      
+      shear testing to determine frictional and dynamic soil properties under
+      repeated and high-frequency loading.
     </li>
 
   </ul>
@@ -629,12 +744,18 @@ body {
   <h2>Selected Research Projects</h2>
 
 
+  <!-- =========================
+       DYFI PROJECT
+  ========================= -->
+
   <h3>
     DYFI-Based Ground-Motion Conversion and Path Attenuation Modeling
   </h3>
+
   <p class="research-position">
-    <strong>Doctoral Research </strong> | Old Dominion University
+    <strong>Doctoral Research</strong> | Old Dominion University
   </p>
+
 
   <ul>
 
@@ -648,9 +769,9 @@ body {
 
     <li>
       <strong>Methods:</strong>
-     Developed workflows integrating instrumental records with ZIP-code-based and
+      Developed workflows integrating instrumental records with ZIP-code-based and
       1-km geocoded DYFI observations; developed MMI-to-PGA models incorporating
-      magnitude, rupture distance, and  V<sub>S30</sub>; and evaluated predictive
+      magnitude, rupture distance, and V<sub>S30</sub>; and evaluated predictive
       performance and attenuation behavior through residual analysis, statistical
       testing, and comparison with established models.
     </li>
@@ -666,52 +787,52 @@ body {
 
   </ul>
 
+
+  <!-- =========================
+       CYCLIC DIRECT SHEAR
+  ========================= -->
+
   <h3>
     Cyclic Direct Shear Characterization of Sand for Rapidly Deployable Hardened Shelters
   </h3>
 
   <p class="research-position">
-    <strong>U.S. Air Force STTR-Funded Research </strong> 
+    <strong>U.S. Air Force STTR-Funded Research</strong>
   </p>
-  
-  <ul>
 
+
+  <!-- PHOTO CAROUSEL -->
 
   <div class="lab-gallery">
 
     <p class="gallery-caption"
-     id="galleryCaption">
-
+       id="galleryCaption">
       Selected photographs from Direct Shear Test
-
     </p>
 
 
-    <div class="gallery-carousel">
+    <div class="gallery-navigation">
+
+      <button
+        class="gallery-btn"
+        id="galleryPrev"
+        type="button">
+
+        &#10094; Previous
+
+      </button>
 
 
-      <div class="gallery-navigation">
+      <button
+        class="gallery-btn"
+        id="galleryNext"
+        type="button">
 
-        <button
-          class="gallery-btn"
-          id="galleryPrev"
-          type="button">
+        Next &#10095;
 
-          &#10094; Previous
+      </button>
 
-        </button>
-
-
-        <button
-          class="gallery-btn"
-          id="galleryNext"
-          type="button">
-
-          Next &#10095;
-
-        </button>
-
-      </div>
+    </div>
 
 
     <div class="gallery-row">
@@ -719,38 +840,36 @@ body {
       <img
         id="galleryImg1"
         src="DS1.png"
-        alt="Soil Mechanics Laboratory">
+        alt="Direct Shear Test photograph 1">
 
       <img
         id="galleryImg2"
         src="DS2.png"
-        alt="Soil Mechanics Laboratory">
+        alt="Direct Shear Test photograph 2">
 
       <img
         id="galleryImg3"
         src="DS3.png"
-        alt="Soil Mechanics Laboratory">
+        alt="Direct Shear Test photograph 3">
 
       <img
         id="galleryImg4"
         src="DS4.png"
-        alt="Soil Mechanics Laboratory">
+        alt="Direct Shear Test photograph 4">
 
     </div>
 
-
   </div>
 
-</div>
 
-
-</div>
+  <ul>
 
     <li>
       <strong>Research objective:</strong>
       Support the development of rapidly deployable, low-logistics hardened shelters
       for resilient basing in which sand serves as a primary wall material.
     </li>
+
 
     <li>
       <strong>Methods:</strong>
@@ -759,12 +878,14 @@ body {
       dynamic response under repeated loading.
     </li>
 
+
     <li>
       <strong>Ongoing research:</strong>
       Contributing to the characterization of sand under high-frequency cyclic loading
       and the development of a customized dynamic-property model suitable for the loading
       conditions associated with the proposed shelter system.
     </li>
+
 
     <li>
       <strong>Key contribution:</strong>
@@ -773,14 +894,20 @@ body {
     </li>
 
   </ul>
-  
+
+
+  <!-- =========================
+       SPATIAL CORRELATION
+  ========================= -->
+
   <h3>
     Nonstationary Spatial Correlation Modeling of Earthquake Ground Motions
   </h3>
-    
+
   <p class="research-position">
-    <strong>Collaborative Research </strong> | Old Dominion University
-  </p>    
+    <strong>Collaborative Research</strong> | Old Dominion University
+  </p>
+
 
   <ul>
 
@@ -809,13 +936,19 @@ body {
 
   </ul>
 
+
+  <!-- =========================
+       AMBIENT NOISE
+  ========================= -->
+
   <h3>
     Ambient-Noise Field Investigation for Subsurface Characterization and Land-Subsidence Studies
   </h3>
-    
+
   <p class="research-position">
-    <strong>Old Dominion University Summer Seed Grant </strong> | 2023
-  </p>    
+    <strong>Old Dominion University Summer Seed Grant</strong> | 2023
+  </p>
+
 
   <ul>
 
@@ -826,12 +959,14 @@ body {
       for subsurface characterization in the Hampton Roads region.
     </li>
 
+
     <li>
       <strong>Methods:</strong>
       Participated in field data collection and analysis of horizontal-to-vertical
       spectral ratios (HVSR) derived from ambient-noise measurements to investigate
       relationships between surface measurements and subsurface stratigraphy.
     </li>
+
 
     <li>
       <strong>Key contribution:</strong>
@@ -842,8 +977,8 @@ body {
 
   </ul>
 
-
 </div>
+
 
 <!-- =========================
      CONFERENCE PRESENTATIONS
@@ -908,7 +1043,7 @@ body {
 
 </div>
 
-  
+
 <!-- =========================
      JOURNAL PUBLICATIONS
 ========================= -->
@@ -1016,12 +1151,14 @@ body {
   </ol>
 
 </div>
-  
+
+
+</div>
 </div>
 
 </div>
 
-</div>
+
 <!-- =========================
      GALLERY JAVASCRIPT
 ========================= -->
@@ -1121,9 +1258,7 @@ document
 
 </script>
 
+
 </body>
 
 </html>
-
-
-  
